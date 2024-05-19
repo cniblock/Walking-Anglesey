@@ -1,21 +1,36 @@
 {% extends 'base.html' %}
-{% block content %}
 {% load static %}
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-8">
-      <!-- Title goes between these h2 tags -->
-      <h2>{{ about.title }}</h2>
-      <!-- Content goes directly underneath this -->
-      {{ about.content | safe }}
-    </div>
-  </div>
-  <div class="row">
-    <div class="col text-right">
-      <!-- Updated on field goes in here -->
 
-      <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 col-md-4 text-center">
+            <img src="{% static 'images/nobody.jpg' %}" width="75%">
+        </div>
+        <div class="col-12 col-md-8">
+            <h2>{{ about.title }}</h2>
+            {{ about.content | safe }}
+        </div>
     </div>
-  </div>
+    <div class="row">
+        <div class="col text-right">
+          <!-- Updated on field goes in here -->
+    
+          <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 my-5">
+            <h2>Get in touch!</h2>
+            <p>Here at Walk Anglesey we believe in the power of community and communication. 
+              If you wish to get in touch with us about walk suggestions, updates on current walk details or 
+              indeed with to contribute yourself and become an admin and walk blogger, please feel free 
+              to get in touch by completing the form below. We're looking forward to hearing from you.
+            </p>
+
+            <!-- add your form here. Your submit button should 
+                                have the classes of btn, btn-secondary -->
+        </div>
+    </div>
 </div>
 {% endblock content %}
