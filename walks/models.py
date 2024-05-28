@@ -17,6 +17,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
+    likes = models.ManyToManyField(User, related_name='liked_posts')
 
     class Meta:
         ordering = ["-created_on"]
@@ -37,3 +38,4 @@ class Comment(models.Model):
         ordering = ["created_on"]
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
+
