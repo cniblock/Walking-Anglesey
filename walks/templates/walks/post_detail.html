@@ -3,41 +3,61 @@
 {% load crispy_forms_tags %}
 
 <div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ post.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-              {% if "placeholder" in post.featured_image.url %}
-              <img src="{% static 'images/default.jpg' %}" class="scale"
-                alt="placeholder image">
-              {% else %}
-              <img src="{{ post.featured_image.url }}" class="scale"
-                alt="{{ post.title }}">
-              {% endif %}
-            </div>
-        </div>
+  <div class="container">
+    <div class="row g-0">
+      <div class="col-md-6 masthead-text">
+        <!-- Post title goes in these h1 tags -->
+        <h1 class="post-title">{{ post.title }}</h1>
+        <!-- Post author goes before the | the post's created date goes after -->
+        <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+      </div>
+      <div class="d-none d-md-block col-md-6 masthead-image">
+        {% if "placeholder" in post.featured_image.url %}
+        <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder image">
+        {% else %}
+        <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">
+        {% endif %}
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <h2>Words & Photography by {{ post.author }}</h2>
-                <p class="card-text">
-                    {{ post.content | safe }}
-                </p>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col card mb-4  mt-3 left  top">
+      <div class="card-body">
+        <!-- The post content goes inside the card-text. -->
+        <!-- Use the | safe filter inside the template tags -->
+        <h2>Words & Photography by {{ post.author }}</h2>
+        <p class="card-text">
+          {{ post.content | safe }}
+        </p>
+      </div>
     </div>
-    <!-- Displaying count of comments -->
+  </div>
+
+  <!-- Displaying count of likes -->
+  <div class="row">
+    <div class="col-12">
+      <strong class="text-secondary">
+        <i class="fas fa-thumbs-up"></i> {{ post.likes }} likes
+      </strong>
+    </div>
+    <div class="col-12">
+      <hr>
+    </div>
+  </div>
+
+  <!-- Like Button -->
+  <div class="row">
+    <div class="col-12">
+      <button class="btn btn-primary" id="likeButton" onclick="likePost({{ post.id }})">
+        Like
+      </button>
+    </div>
+  </div>
+
+  <!-- Displaying count of comments -->
   <div class="row">
     <div class="col-12">
       <strong class="text-secondary">
@@ -74,55 +94,47 @@
           </p>
           {% endif %}
           {% if user.is_authenticated and comment.author == user %}
-          <button class="btn btn-delete"
-    comment_id="{{ comment.id }}">Delete</button>
-  <button class="btn btn-edit"
-    comment_id="{{ comment.id }}">Edit</button>
-  {% endif %}
+          <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+          <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+          {% endif %}
         </div>
         <!-- Our for loop ends here -->
         {% endfor %}
       </div>
     </div>
-        <!-- Creating New Comments -->
-        <div class="col-md-4 card mb-4 mt-3">
-            <div class="card-body">
-              {% if user.is_authenticated %}
-              <h3>Leave a comment:</h3>
-              <p>Posting as: {{ user.username }}</p>
-              <form id="commentForm" method="post"
-                style="margin-top: 1.3em;">
-                {{ comment_form | crispy }}
-                {% csrf_token %}
-                <button id="submitButton" type="submit"
-                  class="btn btn-signup btn-lg">Submit</button>
-              </form>
-              {% else %}
-              <p>Log in to leave a comment</p>
-              {% endif %}
-            </div>
-          </div>
+    <!-- Creating New Comments -->
+    <div class="col-md-4 card mb-4 mt-3">
+      <div class="card-body">
+        {% if user.is_authenticated %}
+        <h3>Leave a comment:</h3>
+        <p>Posting as: {{ user.username }}</p>
+        <form id="commentForm" method="post" style="margin-top: 1.3em;">
+          {{ comment_form | crispy }}
+          {% csrf_token %}
+          <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+        </form>
+        {% else %}
+        <p>Log in to leave a comment</p>
+        {% endif %}
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- Delete confirmation modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1"
-  aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title"
-          id="deleteModalLabel">Delete comment?</h5>
-        <button type="button" class="btn-close"
-          data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         Are you sure you want to delete your comment?
         This action cannot be undone.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"
-          data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <a id="deleteConfirm" href="#" class="btn
           btn-danger">Delete</a>
       </div>
@@ -134,4 +146,34 @@
 
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
+<script>
+  async function likePost(postId) {
+      const csrftoken = getCookie('csrftoken');
+      const response = await fetch(`/post/${postId}/like/`, {
+          method: 'POST',
+          headers: {
+              'X-CSRFToken': csrftoken,
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({})
+      });
+      const data = await response.json();
+      document.querySelector('.fa-thumbs-up').nextElementSibling.textContent = `${data.likes} likes`;
+  }
+
+  function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+          const cookies = document.cookie.split(';');
+          for (let i = 0; i < cookies.length; i++) {
+              const cookie = cookies[i].trim();
+              if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                  break;
+              }
+          }
+      }
+      return cookieValue;
+  }
+</script>
 {% endblock %}
