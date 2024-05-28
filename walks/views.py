@@ -58,16 +58,10 @@ def post_detail(request, slug):
     )
 
 def like_post(request, post_id):
-    post = get_object_or_404(Post, id=post_id)
-    like, created = Like.objects.get_or_create(user=request.user, post=post)
-    if not created:
-        like.delete()
-        post.likes -= 1
-        post.save()
-        return JsonResponse({'likes': post.likes, 'liked': False})
+    post = Post.objects.get(id=post_id)
     post.likes += 1
     post.save()
-    return JsonResponse({'likes': post.likes, 'liked': True})
+    return JsonResponse({'likes': post.likes})
 
 
 def comment_edit(request, slug, comment_id):

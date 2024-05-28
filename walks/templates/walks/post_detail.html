@@ -37,25 +37,10 @@
   </div>
 
   <!-- Displaying count of likes -->
-  <div class="row">
-    <div class="col-12">
-      <strong class="text-secondary">
-        <i class="fas fa-thumbs-up"></i> {{ post.likes }} likes
-      </strong>
-    </div>
-    <div class="col-12">
-      <hr>
-    </div>
-  </div>
-
-  <!-- Like Button -->
-  <div class="row">
-    <div class="col-12">
-      <button class="btn btn-primary" id="likeButton" onclick="likePost({{ post.id }})">
-        Like
-      </button>
-    </div>
-  </div>
+  <button class="btn btn-primary" id="likeButton" onclick="likePost({{ post.id }})">
+    Like
+  </button>
+  <span id="likesCount">{{ post.likes }}</span> likes
 
   <!-- Displaying count of comments -->
   <div class="row">
@@ -146,34 +131,4 @@
 
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
-<script>
-  async function likePost(postId) {
-      const csrftoken = getCookie('csrftoken');
-      const response = await fetch(`/post/${postId}/like/`, {
-          method: 'POST',
-          headers: {
-              'X-CSRFToken': csrftoken,
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({})
-      });
-      const data = await response.json();
-      document.querySelector('.fa-thumbs-up').nextElementSibling.textContent = `${data.likes} likes`;
-  }
-
-  function getCookie(name) {
-      let cookieValue = null;
-      if (document.cookie && document.cookie !== '') {
-          const cookies = document.cookie.split(';');
-          for (let i = 0; i < cookies.length; i++) {
-              const cookie = cookies[i].trim();
-              if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                  break;
-              }
-          }
-      }
-      return cookieValue;
-  }
-</script>
 {% endblock %}
