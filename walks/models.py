@@ -17,21 +17,12 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
-    likes = models.IntegerField(default=0)
 
     class Meta:
         ordering = ["-created_on"]
 
     def __str__(self):
         return f"{self.title} | written by {self.author}"
-
-class Like(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    created_on = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        unique_together = ('user', 'post')
 
 
 class Comment(models.Model):

@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Post, Comment, Like
+from .models import Post, Comment
 from .forms import CommentForm
 from django.contrib.auth.decorators import login_required
 
@@ -56,12 +56,6 @@ def post_detail(request, slug):
         "comment_form": comment_form,
         },
     )
-
-def like_post(request, post_id):
-    post = Post.objects.get(id=post_id)
-    post.likes += 1
-    post.save()
-    return JsonResponse({'likes': post.likes})
 
 
 def comment_edit(request, slug, comment_id):
