@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Post, Comment
+from .models import Post, Comment, Like
 from .forms import CommentForm
 from django.contrib.auth.decorators import login_required
 
@@ -56,6 +56,23 @@ def post_detail(request, slug):
         "comment_form": comment_form,
         },
     )
+
+
+@login_required
+def like_post(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    user = request.user
+
+    # Check if the user already liked the post
+    if post.liked.filter(id=user.id).exists():
+        # User has already liked this post, so unlike it
+        post.liked.remove(user)
+    else:
+        # User has not liked this post, so like it
+        post.liked.add(user)
+
+    # Redirect back to the post detail page after like/unlike
+    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
 def comment_edit(request, slug, comment_id):

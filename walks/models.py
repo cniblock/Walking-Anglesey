@@ -17,7 +17,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
-    likes = models.ManyToManyField(User, related_name='liked_posts')
+    liked = models.ManyToManyField(User, default=None, blank=True, related_name='liked_posts')
 
     class Meta:
         ordering = ["-created_on"]
@@ -25,7 +25,27 @@ class Post(models.Model):
     def __str__(self):
         return f"{self.title} | written by {self.author}"
 
+    @property
+    def num_likes(self):
+        return self.liked.all().count()
 
+
+# Like Model
+LIKE_CHOICES = (
+    ('Like', 'Like'),
+    ('Unlike', 'Unlike'),
+)
+
+
+class Like(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    value = models.CharField(choices=LIKE_CHOICES, default='Like', max_length=10)
+
+    def __str__(self):
+        return str(self.post)
+
+#Comment model
 class Comment(models.Model):
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name="comments")
