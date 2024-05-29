@@ -1,38 +1,31 @@
+import requests 
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Post, Comment, Like
+from .models import Post, Comment
 from .forms import CommentForm
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
 
-# Create your views here.
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "walks/index.html"
     paginate_by = 6
 
+def get_weather(location):
+    api_key = settings.OPENWEATHERMAP_API_KEY
+    base_url = "http://api.openweathermap.org/data/2.5/weather?"
+    complete_url = base_url + "q=" + location + "&appid=" + api_key + "&units=metric"
+    response = requests.get(complete_url)
+    return response.json()
 
 def post_detail(request, slug):
-    """
-    Display an individual :model:`walks.Post`.
-
-    **Context**
-
-    ``post``
-        An instance of :model:`walks.Post`.
-
-    **Template:**
-
-    :template:`walks/post_detail.html`
-    """
-
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
     if request.method == "POST":
-        print("Received a POST request")
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
@@ -43,44 +36,26 @@ def post_detail(request, slug):
                 request, messages.SUCCESS,
                 'Comment submitted and awaiting approval'
             )
-
     comment_form = CommentForm()
-    print("About to render template")
+    
+    # Fetch weather data for the location
+    weather_data = get_weather("Anglesey")
 
     return render(
         request,
         "walks/post_detail.html",
-        {"post": post,
-        "comments": comments,
-        "comment_count": comment_count,
-        "comment_form": comment_form,
+        {
+            "post": post,
+            "comments": comments,
+            "comment_count": comment_count,
+            "comment_form": comment_form,
+            "weather_data": weather_data,
         },
     )
 
-
 @login_required
-def like_post(request, slug):
-    post = get_object_or_404(Post, slug=slug)
-    user = request.user
-
-    # Check if the user already liked the post
-    if post.liked.filter(id=user.id).exists():
-        # User has already liked this post, so unlike it
-        post.liked.remove(user)
-    else:
-        # User has not liked this post, so like it
-        post.liked.add(user)
-
-    # Redirect back to the post detail page after like/unlike
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
-
 def comment_edit(request, slug, comment_id):
-    """
-    view to edit comments
-    """
     if request.method == "POST":
-
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comment = get_object_or_404(Comment, pk=comment_id)
@@ -97,11 +72,8 @@ def comment_edit(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-
+@login_required
 def comment_delete(request, slug, comment_id):
-    """
-    view to delete comment
-    """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
