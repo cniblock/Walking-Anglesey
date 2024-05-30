@@ -3,18 +3,16 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<div class="container-fluid p-0">
+  <div class="hero-image" style="background-image: url('{{ about.profile_image.url }}'); height: 400px; background-size: cover; background-position: center;">
+      <div class="d-flex align-items-center justify-content-center h-100 text-white">
+      </div>
+  </div>
+</div>
+
 <div class="container mt-5">
     <div class="row">
-        <div class="col-12 col-md-4 text-center">
-            {% if "placeholder" in about.profile_image.url %}
-      <img src="{% static 'images/nobody.jpg' %}" width="75%"
-        alt="placeholder image" >
-      {% else %}
-      <img src="{{ about.profile_image.url }}" width="75%"
-        alt="{{ about.title }}">
-      {% endif %}
-        </div>
-        <div class="col-12 col-md-8">
+        <div class="col-12">
             <h2>{{ about.title }}</h2>
             {{ about.content | safe }}
         </div>
@@ -22,7 +20,6 @@
     <div class="row">
         <div class="col text-right">
           <!-- Updated on field goes in here -->
-    
           <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
         </div>
     </div>

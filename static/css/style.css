@@ -163,3 +163,9 @@ body {
 .header_img {
     margin-bottom: 15px;
 }
+
+.hero-image {
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
