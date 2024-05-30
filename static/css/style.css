@@ -58,8 +58,11 @@ body {
 }
 
 .masthead {
+    position: relative;
     height: 40vh; 
     overflow: hidden;
+    width: 100%;
+    z-index: 1
 }
 
 #header_img {
@@ -70,10 +73,13 @@ body {
 }
 
 .masthead-text {
+    position: absolute;
     top: 10px;
     left: 10px;
     background-color: rgba(68, 82, 97, 0.8);
-    z-index: 10;
+    color: white;
+    padding: 20px;
+    z-index: 2;
 }
 
 .post-link {
