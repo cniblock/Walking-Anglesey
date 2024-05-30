@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    {% if hero_image %}
+    <div class="hero-image" style="background-image: url('{{ hero_image }}'); height: 400px; background-size: cover; background-position: center;">
+    </div>
+    <div class="hero-text">
+        <h1 class="display-4">Welcome to our featured Walks</h1>
+        <p class="lead">Explore our latest posts</p>
+    </div>
+    {% endif %}
+
+    <div class="container mt-4">
+        <div class="row">
+            {% for post in posts %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="image-container">
+                            {% if "placeholder" in post.featured_image.url %}
+                            <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                            {% else %}
+                            <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                            {% endif %}
+                            <div class="image-flash">
+                                <p class="author">Author: {{ post.author }}</p>
+                            </div>
+                        </div>
+                        <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                            <h2 class="card-title">{{ post.title }}</h2>
+                            <p class="card-text">{{ post.excerpt }}</p>
+                        </a>
+                        <hr />
+                        <p class="card-text text-muted h6">{{ post.created_on }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

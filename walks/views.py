@@ -7,6 +7,7 @@ from .models import Post, Comment
 from .forms import CommentForm
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
+import random
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
@@ -85,3 +86,17 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+def walkslist(request):
+    posts = Post.objects.all()
+    hero_image = None
+    if posts:
+        random_post = random.choice(posts)
+        hero_image = random_post.featured_image.url
+
+    context = {
+        'posts': posts,
+        'hero_image': hero_image,
+    }
+    return render(request, 'walks/walkslist.html', context)
