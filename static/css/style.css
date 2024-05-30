@@ -22,7 +22,7 @@ body {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #848484;
 }
 
 .main-bg {
@@ -168,4 +168,28 @@ body {
     background-size: cover;
     background-position: center;
     height: 400px;
+}
+
+.footer .social-icon.facebook {
+    color: #3b5998; 
+}
+
+.footer .social-icon.twitter {
+    color: #1da1f2; 
+}
+
+.footer .social-icon.instagram {
+    color: #c32aa3;
+}
+
+.footer .social-icon.youtube {
+    color: #ff0000;
+}
+
+.icon-bg {
+    background-color: white;
+    border-radius: 5px; 
+    padding: 5px; 
+    margin: 2px; 
+    display: inline-block;
 }
