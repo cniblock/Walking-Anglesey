@@ -23,44 +23,56 @@
       </div>
     </div>
   </div>
-  <!-- Weather Section -->
-<div class="row">
-  <div class="col-md-6">
-    <div class="card mb-4 mt-3">
-      <div class="card-body">
-        <h2>Current Weather</h2>
-        {% if weather_data %}
-        <table class="table table-bordered">
-          <tbody>
-            <tr>
-              <th scope="row">Location</th>
-              <td>{{ weather_data.name }}</td>
-            </tr>
-            <tr>
-              <th scope="row">Temperature</th>
-              <td>{{ weather_data.main.temp }} &deg;C</td>
-            </tr>
-            <tr>
-              <th scope="row">Weather</th>
-              <td>{{ weather_data.weather.0.description }}</td>
-            </tr>
-            <tr>
-              <th scope="row">Humidity</th>
-              <td>{{ weather_data.main.humidity }}%</td>
-            </tr>
-            <tr>
-              <th scope="row">Wind Speed</th>
-              <td>{{ weather_data.wind.speed }} m/s</td>
-            </tr>
-          </tbody>
-        </table>
-        {% else %}
-        <p>Weather data is not available at the moment.</p>
-        {% endif %}
-      </div>
+  <div class="row mt-4">
+    <div class="col text-center">
+      {% if post.route_image %}
+      <img src="{{ post.route_image.url }}" class="img-fluid" alt="Route Image">
+      {% else %}
+      <p>No route image available.</p>
+      {% endif %}
     </div>
   </div>
 </div>
+  <!-- Weather Section -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mb-4 mt-3 mx-auto">
+          <div class="card-body">
+            <h2>Current Weather</h2>
+            {% if weather_data %}
+            <table class="table table-bordered">
+              <tbody>
+                <tr>
+                  <th scope="row">Location</th>
+                  <td>{{ weather_data.name }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Temperature</th>
+                  <td>{{ weather_data.main.temp }} &deg;C</td>
+                </tr>
+                <tr>
+                  <th scope="row">Weather</th>
+                  <td>{{ weather_data.weather.0.description }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Humidity</th>
+                  <td>{{ weather_data.main.humidity }}%</td>
+                </tr>
+                <tr>
+                  <th scope="row">Wind Speed</th>
+                  <td>{{ weather_data.wind.speed }} m/s</td>
+                </tr>
+              </tbody>
+            </table>
+            {% else %}
+            <p>Weather data is not available at the moment.</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Displaying count of comments -->
   <div class="row">
     <div class="col-12">
