@@ -10,7 +10,7 @@ from django.conf import settings
 import random
 
 class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1)
+    queryset = Post.objects.filter(status=1).order_by('?')
     template_name = "walks/index.html"
     paginate_by = 6
 
