@@ -8,6 +8,8 @@ from .models import Post, Comment, NewsletterSubscriber
 from django_summernote.admin import SummernoteModelAdmin
 from .forms import NewsletterForm
 
+BATCH_SIZE = 10
+
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     list_display = ('title', 'slug', 'status', 'created_on')
@@ -44,9 +46,14 @@ class NewsletterSubscriberAdmin(admin.ModelAdmin):
             if form.is_valid():
                 subject = form.cleaned_data['subject']
                 message = form.cleaned_data['message']
-                recipients = NewsletterSubscriber.objects.values_list('email', flat=True)
-                send_mail(subject, message, 'your_email@example.com', recipients)
-                self.message_user(request, "Newsletter has been sent successfully.")
+                recipients = list(NewsletterSubscriber.objects.values_list('email', flat=True))
+                
+                # Send emails in batches
+                for i in range(0, len(recipients), BATCH_SIZE):
+                    batch = recipients[i:i + BATCH_SIZE]
+                    send_mail(subject, message, 'your_email@example.com', batch)
+                
+                self.message_user(request, "Newsletter is being sent successfully. Emails will be sent in batches.")
                 return HttpResponseRedirect("../")
         else:
             form = NewsletterForm()
