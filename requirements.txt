@@ -8,7 +8,3 @@ django-summernote==0.8.20.0
 django-allauth==0.63.1
 django-crispy-forms==2.1
 crispy-bootstrap5==2024.2
-wheel
-Cython>=0.29.21
-PyYAML==6.0.1 --only-binary :all:
-requests==2.32.2
