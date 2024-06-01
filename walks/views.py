@@ -1,10 +1,10 @@
 import requests 
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Post, Comment
-from .forms import CommentForm
+from .models import Post, Comment, NewsletterSubscriber
+from .forms import CommentForm, NewsletterSubscriptionForm
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 import random
@@ -87,7 +87,6 @@ def comment_delete(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-
 def walkslist(request):
     posts = Post.objects.all()
     hero_image = None
@@ -100,3 +99,14 @@ def walkslist(request):
         'hero_image': hero_image,
     }
     return render(request, 'walks/walkslist.html', context)
+
+def subscribe_newsletter(request):
+    if request.method == "POST":
+        form = NewsletterSubscriptionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "You have successfully subscribed to the newsletter.")
+            return redirect('home')
+    else:
+        form = NewsletterSubscriptionForm()
+    return render(request, 'walks/subscribe_newsletter.html', {'form': form})

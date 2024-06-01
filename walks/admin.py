@@ -1,10 +1,15 @@
 from django.contrib import admin
-from .models import Post, Comment
+from django.core.mail import send_mail
+from django.contrib import messages
+from django.http import HttpResponseRedirect
+from django.urls import path
+from django.shortcuts import render
+from .models import Post, Comment, NewsletterSubscriber
 from django_summernote.admin import SummernoteModelAdmin
+from .forms import NewsletterForm
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
-
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'content']
     list_filter = ('status', 'created_on',)
@@ -17,6 +22,43 @@ class PostAdmin(SummernoteModelAdmin):
         }),
     )
 
-
-# Register your models here.
 admin.site.register(Comment)
+
+@admin.register(NewsletterSubscriber)
+class NewsletterSubscriberAdmin(admin.ModelAdmin):
+    list_display = ('email', 'date_subscribed')
+    search_fields = ['email']
+    list_filter = ('date_subscribed',)
+    actions = ['send_newsletter']
+
+    def get_urls(self):
+        urls = super().get_urls()
+        custom_urls = [
+            path('send_newsletter/', self.admin_site.admin_view(self.send_newsletter_view), name='send_newsletter'),
+        ]
+        return custom_urls + urls
+
+    def send_newsletter_view(self, request):
+        if request.method == 'POST':
+            form = NewsletterForm(request.POST)
+            if form.is_valid():
+                subject = form.cleaned_data['subject']
+                message = form.cleaned_data['message']
+                recipients = NewsletterSubscriber.objects.values_list('email', flat=True)
+                send_mail(subject, message, 'your_email@example.com', recipients)
+                self.message_user(request, "Newsletter has been sent successfully.")
+                return HttpResponseRedirect("../")
+        else:
+            form = NewsletterForm()
+
+        context = {
+            'form': form,
+            'title': 'Send Newsletter'
+        }
+        return render(request, 'admin/send_newsletter.html', context)
+
+    def send_newsletter(self, request, queryset):
+        return HttpResponseRedirect('send_newsletter/')
+
+    send_newsletter.short_description = 'Send Newsletter to Subscribers'
+
