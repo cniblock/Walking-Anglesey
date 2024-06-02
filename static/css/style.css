@@ -44,6 +44,7 @@ body {
     min-width: 30%;
     left: -2px;
     background-color: #188181;
+    text-align: right;
 }
 
 .scale {

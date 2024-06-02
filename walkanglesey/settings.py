@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["8000-cniblock-walking-anglese-v7zv8333cx.us1.codeanyapp.com",'.herokuapp.com']
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    'django_google_maps',
     "django.contrib.staticfiles",
     'cloudinary_storage',
     'django.contrib.sites',

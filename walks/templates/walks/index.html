@@ -24,6 +24,19 @@
                 </p>
             </div>
         </section>
+
+        <!-- Map Section -->
+        <section class="text-center my-4">
+            <div class="container">
+                <h2 class="display-6">Map of Walks</h2>
+                <div id="map" style="height: 500px; width: 100%;"></div>
+            </div>
+        </section>
+        <section class="text-center my-4">
+            <div class="container">
+                <h2 class="display-6">Walk Blogs</h2>
+            </div>
+        </section>
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
@@ -82,6 +95,10 @@
     </nav>
     {% endif %}
 </div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChOs61BNQizWXVi6v600vBtM-A-NKiPoU"></script>
+
+<script src="{% static 'js/map.js' %}"></script>
 
 <!-- index.html content ends here -->
 {% endblock %}
