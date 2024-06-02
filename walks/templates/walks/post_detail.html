@@ -7,6 +7,7 @@
   <div class="masthead-text position-absolute text-white p-3">
       <h1 class="post-title">{{ post.title }}</h1>
       <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+      <p class="post-difficulty bg-custom text-white px-2 py-1 rounded">Difficulty: {{ post.get_difficulty_display }}</p>
   </div>
 </div>
 

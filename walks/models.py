@@ -4,6 +4,12 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+DIFFICULTY_CHOICES = [
+    ('easy', 'Easy'),
+    ('moderate', 'Moderate'),
+    ('difficult', 'Difficult'),
+]
+
 # Post model
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -16,6 +22,7 @@ class Post(models.Model):
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     route_image = CloudinaryField('image', blank=True, null=True)
+    difficulty = models.CharField(max_length=10, choices=DIFFICULTY_CHOICES, default='moderate')
 
     class Meta:
         ordering = ["-created_on"]

@@ -12,15 +12,15 @@ BATCH_SIZE = 10
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
-    list_display = ('title', 'slug', 'status', 'created_on')
+    list_display = ('title', 'slug', 'status', 'created_on', 'difficulty')
     search_fields = ['title', 'content']
-    list_filter = ('status', 'created_on',)
+    list_filter = ('status', 'created_on', 'difficulty')
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content',)
 
     fieldsets = (
         (None, {
-            'fields': ('title', 'slug', 'author', 'featured_image', 'route_image', 'content', 'excerpt', 'status')
+            'fields': ('title', 'slug', 'author', 'featured_image', 'route_image', 'content', 'excerpt', 'status', 'difficulty')
         }),
     )
 
