@@ -12,7 +12,7 @@ BATCH_SIZE = 10
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
-    list_display = ('title', 'slug', 'status', 'created_on', 'difficulty')
+    list_display = ('title', 'slug', 'status', 'created_on', 'difficulty', 'likes')
     search_fields = ['title', 'content']
     list_filter = ('status', 'created_on', 'difficulty')
     prepopulated_fields = {'slug': ('title',)}

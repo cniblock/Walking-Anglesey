@@ -177,11 +177,20 @@ body {
     background: #006b99;
 }
 
-.btn-like:hover,
-.btn-like:active {
-    color: #006b99;
-    background: transparent;
+.btn-like {
+    background-color: #006b99;
+    color: white;
     border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-like:hover, .btn-like:focus {
+    background-color: #004e73;
+    color: white;
 }
 
 .faded {

@@ -3,11 +3,13 @@
 {% load crispy_forms_tags %}
 
 <div class="masthead position-relative">
-  <img id="header_img" src="{% if 'placeholder' in post.featured_image.url %}{% static 'images/default.jpg' %}{% else %}{{ post.featured_image.url }}{% endif %}" class="img-fluid w-100" alt="{{ post.title }}">
+  <img id="header_img"
+    src="{% if 'placeholder' in post.featured_image.url %}{% static 'images/default.jpg' %}{% else %}{{ post.featured_image.url }}{% endif %}"
+    class="img-fluid w-100" alt="{{ post.title }}">
   <div class="masthead-text position-absolute text-white p-3">
-      <h1 class="post-title">{{ post.title }}</h1>
-      <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
-      <p class="post-difficulty bg-custom text-white px-2 py-1 rounded">Difficulty: {{ post.get_difficulty_display }}</p>
+    <h1 class="post-title">{{ post.title }}</h1>
+    <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+    <p class="post-difficulty bg-custom text-white px-2 py-1 rounded">Difficulty: {{ post.get_difficulty_display }}</p>
   </div>
 </div>
 
@@ -25,6 +27,7 @@
     </div>
   </div>
   <div class="row mt-4">
+    <h2>Walking Route Map</h2>
     <div class="col text-center">
       {% if post.route_image %}
       <img src="{{ post.route_image.url }}" class="img-fluid" alt="Route Image">
@@ -34,47 +37,56 @@
     </div>
   </div>
 </div>
-  <!-- Weather Section -->
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="card mb-4 mt-3 mx-auto">
-          <div class="card-body">
-            <h2>Current Weather</h2>
-            {% if weather_data %}
-            <table class="table table-bordered">
-              <tbody>
-                <tr>
-                  <th scope="row">Location</th>
-                  <td>{{ weather_data.name }}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Temperature</th>
-                  <td>{{ weather_data.main.temp }} &deg;C</td>
-                </tr>
-                <tr>
-                  <th scope="row">Weather</th>
-                  <td>{{ weather_data.weather.0.description }}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Humidity</th>
-                  <td>{{ weather_data.main.humidity }}%</td>
-                </tr>
-                <tr>
-                  <th scope="row">Wind Speed</th>
-                  <td>{{ weather_data.wind.speed }} m/s</td>
-                </tr>
-              </tbody>
-            </table>
-            {% else %}
-            <p>Weather data is not available at the moment.</p>
-            {% endif %}
-          </div>
+<!-- Weather Section -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card mb-4 mt-3 mx-auto">
+        <div class="card-body">
+          <h2>Current Weather</h2>
+          {% if weather_data %}
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <th scope="row">Location</th>
+                <td>{{ weather_data.name }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Temperature</th>
+                <td>{{ weather_data.main.temp }} &deg;C</td>
+              </tr>
+              <tr>
+                <th scope="row">Weather</th>
+                <td>{{ weather_data.weather.0.description }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Humidity</th>
+                <td>{{ weather_data.main.humidity }}%</td>
+              </tr>
+              <tr>
+                <th scope="row">Wind Speed</th>
+                <td>{{ weather_data.wind.speed }} m/s</td>
+              </tr>
+            </tbody>
+          </table>
+          {% else %}
+          <p>Weather data is not available at the moment.</p>
+          {% endif %}
         </div>
       </div>
     </div>
   </div>
-  <!-- Displaying count of comments -->
+  <!-- Like Button -->
+<button id="like-button" data-post-id="{{ post.id }}" class="btn btn-primary">
+  {% if user in post.likes.all %}
+  Unlike
+  {% else %}
+  Like
+  {% endif %}
+</button>
+<span id="likes-count">{{ post.likes.count }}</span>
+</div>
+<!-- Displaying count of comments -->
 <div class="row justify-content-center">
   <div class="col-md-10">
     <strong class="text-secondary">
@@ -93,7 +105,8 @@
     <div class="card-body">
       <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
       {% for comment in comments %}
-      <div class="p-2 comments {% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
+      <div
+        class="p-2 comments {% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
         <p class="font-weight-bold">
           {{ comment.author }}
           <span class="font-weight-normal">
@@ -160,4 +173,5 @@
 
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
+<script src="{% static 'js/like.js' %}"></script>
 {% endblock %}
