@@ -20,7 +20,7 @@ class PostAdmin(SummernoteModelAdmin):
 
     fieldsets = (
         (None, {
-            'fields': ('title', 'slug', 'author', 'featured_image', 'route_image', 'content', 'excerpt', 'status', 'difficulty')
+            'fields': ('title', 'slug', 'author', 'featured_image', 'route_image', 'content', 'excerpt', 'status', 'difficulty', 'likes')
         }),
     )
 

@@ -23,7 +23,7 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     route_image = CloudinaryField('image', blank=True, null=True)
     difficulty = models.CharField(max_length=10, choices=DIFFICULTY_CHOICES, default='moderate')
-    likes = models.IntegerField(default=0)
+    likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
 
     class Meta:
         ordering = ["-created_on"]
