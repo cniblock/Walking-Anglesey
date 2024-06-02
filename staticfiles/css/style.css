@@ -110,6 +110,10 @@ body {
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: 0.375rem;
+    background-color: #006b99;
+    color: white;
+    margin-top: 5%;
+    margin-left: 5%;
 }
 
 .post-link {
