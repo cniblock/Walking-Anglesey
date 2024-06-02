@@ -100,6 +100,11 @@ body {
     color: #ffffff;
 }
 
+.post-difficulty {
+    margin-left: 5%;
+    color: lightgray;
+}
+
 .post-link {
     text-decoration: none;
     color: #445261;
@@ -116,11 +121,6 @@ body {
 }
 
 .post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
-}
-
-.post-difficulty {
     margin-left: 5%;
     color: lightgray;
 }

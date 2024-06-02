@@ -171,3 +171,7 @@ EMAIL_USE_SSL = False
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+os.environ.setdefault(
+    "CLOUDINARY_URL", "cloudinary://868897573851961:wLFk-eERhJB4QBn8_l1QHO4Cn5Q@dbhnwikxg"
+)

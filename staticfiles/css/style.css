@@ -100,22 +100,6 @@ body {
     color: #ffffff;
 }
 
-.post-difficulty {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    font-size: 0.875rem;
-    font-weight: 700;
-    line-height: 1.5;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: 0.375rem;
-    background-color: #006b99;
-    color: white;
-    margin-top: 5%;
-    margin-left: 5%;
-}
-
 .post-link {
     text-decoration: none;
     color: #445261;
@@ -132,6 +116,11 @@ body {
 }
 
 .post-subtitle {
+    margin-left: 5%;
+    color: lightgray;
+}
+
+.post-difficulty {
     margin-left: 5%;
     color: lightgray;
 }
