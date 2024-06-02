@@ -1,6 +1,6 @@
 from . import views
 from django.urls import path
-from .views import subscribe_newsletter, like_post
+from .views import subscribe_newsletter
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
@@ -9,5 +9,4 @@ urlpatterns = [
     path('<slug:slug>/', views.post_detail, name='post_detail'), 
     path('<slug:slug>/edit_comment/<int:comment_id>', views.comment_edit, name='comment_edit'),
     path('<slug:slug>/delete_comment/<int:comment_id>', views.comment_delete),
-    path('like/<int:post_id>/', like_post, name='like_post'),
 ]
