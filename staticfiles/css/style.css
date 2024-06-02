@@ -2,15 +2,27 @@ body {
     background-color: #F9FAFC;
 }
 
+/* Navbar styles */
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-brand,
+.navbar-light .navbar-text {
+    color: #006b99 !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:active {
+    color: #004e73 !important;
+}
+
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: #006b99;
 }
 
 .red-o {
-    color: #E84610;
+    color: #006b99;
 }
 
 .thin {
@@ -31,7 +43,7 @@ body {
 
 .card {
     border: none;
-    background-color: transparent;
+    background-color: rgba(211, 211, 211, 0.2);
 }
 
 .image-container {
@@ -43,7 +55,8 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #188181;
+    background-color: #006b99;
+    text-align: right;
 }
 
 .scale {
@@ -89,7 +102,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #006b99;
 }
 
 .post-title {
@@ -104,18 +117,30 @@ body {
 
 .btn-signup,
 .btn-edit {
-    background-color: #188181;
+    background-color: #006b99;
     color: #fff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
-    color: #23BBBB;
+    color: #006b99;
+}
+
+.btn-secondary {
+    background-color: #006b99 !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+    background-color: #004e73 !important; /* Darker shade for hover/active state */
+    color: #fff !important;
 }
 
 .link {
-    color: #23BBBB;
+    color: #006b99;
     text-decoration: none;
 }
 
@@ -126,19 +151,19 @@ body {
 }
 
 .btn-like {
-    color: #E84610;
+    color: #006b99;
     border: none;
     background: transparent;
 }
 
 .btn-delete {
     color: #fff;
-    background: #E84610;
+    background: #006b99;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #006b99;
     background: transparent;
     border: none;
 }
