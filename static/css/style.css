@@ -3,16 +3,15 @@ body {
 }
 
 /* Navbar styles */
-.navbar,
-.navbar .navbar-brand,
-.navbar .nav-link,
-.navbar .navbar-text {
-    color: #006b99;
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-brand,
+.navbar-light .navbar-text {
+    color: #006b99 !important;
 }
 
-.navbar .nav-link:hover,
-.navbar .nav-link:active {
-    color: #004e73;
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:active {
+    color: #004e73 !important;
 }
 
 .brand {
