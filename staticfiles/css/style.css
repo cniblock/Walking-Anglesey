@@ -121,8 +121,14 @@ body {
 }
 
 .post-difficulty {
+    display: inline-block;
+    background-color: #006b99;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    font-weight: 700;
+    border-radius: 0.375rem;
+    margin-top: 5%;
     margin-left: 5%;
-    color: lightgray;
 }
 
 .btn-signup,
@@ -145,7 +151,7 @@ body {
 
 .btn-secondary:hover,
 .btn-secondary:active {
-    background-color: #004e73 !important; /* Darker shade for hover/active state */
+    background-color: #004e73 !important;
     color: #fff !important;
 }
 
