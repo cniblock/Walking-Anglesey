@@ -76,15 +76,6 @@
       </div>
     </div>
   </div>
-  <!-- Like Button -->
-<button id="like-button" data-post-id="{{ post.id }}" class="btn btn-primary">
-  {% if user in post.likes.all %}
-  Unlike
-  {% else %}
-  Like
-  {% endif %}
-</button>
-<span id="likes-count">{{ post.likes.count }}</span>
 </div>
 <!-- Displaying count of comments -->
 <div class="row justify-content-center">

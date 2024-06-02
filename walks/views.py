@@ -110,16 +110,3 @@ def subscribe_newsletter(request):
     else:
         form = NewsletterSubscriptionForm()
     return render(request, 'walks/subscribe_newsletter.html', {'form': form})
-
-@login_required
-def like_post(request, post_id):
-    post = get_object_or_404(Post, id=post_id)
-    if request.method == 'POST':
-        if post.likes.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)
-            liked = False
-        else:
-            post.likes.add(request.user)
-            liked = True
-        return JsonResponse({'liked': liked, 'likes_count': post.likes.count()})
-    return JsonResponse({'error': 'Invalid request'}, status=400)
