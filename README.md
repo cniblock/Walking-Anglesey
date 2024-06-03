@@ -14,7 +14,23 @@ The website offers detailed walk guides, user-contributed posts, weather informa
 
 ## User Experience 
 
-### Key aim of the site
+### Initial Website Concept 
+
+[Walk Anglesey!](https://walk-anglesey-84445998906a.herokuapp.com/) is a new walking blog website build from the ground up, with 2 main goals. To showcase the fantastic walks on Anglesey and also to create a community. By developing a welcoming and easy to use website, we want to attract new users to become part of our walking family.
+
+To create a passionate community we welcome new users to comment on our walk posts, sign up to news letters and also to get in touch with us and become bloggers themselves, so they can share their love and knowledge of walks on Anglesey.
+
+### Key Features of the Website
+
+* Welcome page with key information about the website.
+* Interactive Map with walk route locations.
+* Highly Detailed walk route information.
+* Pictures of each walk and points of interest along the route.
+* Difficulty rating for each walk.
+* Live Weather information.
+* Comment on walk blogs.
+* Collaboration form for users to get in touch with site owner.
+* News letter that site users can sign up to.
 
 ### User Stories
 
