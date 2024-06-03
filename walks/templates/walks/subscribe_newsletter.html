@@ -2,17 +2,38 @@
 {% load static %}
 
 {% block content %}
-<div class="container my-5">
-    <h1 class="text-center mb-4">Subscribe to our Newsletter</h1>
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <form method="post">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
-                    </form>
+<div class="container-fluid">
+    {% if hero_image %}
+    <div class="hero-image" style="background-image: url('{{ hero_image }}'); height: 400px; background-size: cover; background-position: center;">
+    </div>
+    <div class="hero-text">
+        <h1 class="display-4">Subscribe to our Newsletter</h1>
+    </div>
+    {% endif %}
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="h4 mb-3">Stay Updated with Walk Anglesey</h2>
+                        <p class="mb-4">
+                            Love exploring the beautiful landscapes and rich heritage of Anglesey?
+                            Sign up for our weekly newsletter to get the latest walking routes, hidden gems,
+                            and breathtaking vistas delivered straight to your inbox.
+                            Whether you are a seasoned hiker or a casual stroller,
+                            our newsletter will keep you inspired and informed about all things Anglesey.
+                        </p>
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="d-flex flex-column align-items-center">
+                                <div class="mb-3 w-100">
+                                    {{ form.email.label_tag }}
+                                    {{ form.email }}
+                                </div>
+                                <button type="submit" class="btn btn-secondary">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

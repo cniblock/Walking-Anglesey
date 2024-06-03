@@ -101,6 +101,12 @@ def walkslist(request):
     return render(request, 'walks/walkslist.html', context)
 
 def subscribe_newsletter(request):
+    posts = Post.objects.all()
+    hero_image = None
+    if posts.exists():
+        random_post = random.choice(posts)
+        hero_image = random_post.featured_image.url
+
     if request.method == "POST":
         form = NewsletterSubscriptionForm(request.POST)
         if form.is_valid():
@@ -109,4 +115,10 @@ def subscribe_newsletter(request):
             return redirect('home')
     else:
         form = NewsletterSubscriptionForm()
-    return render(request, 'walks/subscribe_newsletter.html', {'form': form})
+
+    context = {
+        'form': form,
+        'hero_image': hero_image,
+    }
+    
+    return render(request, 'walks/subscribe_newsletter.html', context)
