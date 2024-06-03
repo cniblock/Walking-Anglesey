@@ -61,7 +61,7 @@ To create a passionate community, we welcome new users to comment on our walk po
 
 The colour scheme selected for the website is inspired by nautical themes, reflecting the fresh and vibrant colours walkers would encounter on their coastal walks around Anglesey. The design aims to create a clean, uncluttered, and welcoming environment for users, enhancing their browsing experience and making navigation intuitive.
 
-These are the colours we used:
+These are the colours used:
 
 ![Colours](images/ux-colours.jpg)
 
@@ -145,23 +145,23 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 ![Walk Map and Weather](images/walk-detail-pic3.jpg)
 
 
-* Below the post content and route map and weather, there is a section that displays comments left by other users. Each comment shows the author, creation date, and content, fostering community interaction.
+* Below the post content and route map and weather, there is a section that displays comments left by other users. Each comment shows the author, creation date, and content, fostering community interaction. Users must be logged in to view comments.
 
 ![Walk Comment](images/walk-detail-pic4.jpg)
 
 
-* Users can create, delete or edit their own comments, and unapproved comments are marked for the user’s awareness, maintaining a positive community.
+* Users can create, delete or edit their own comments, and unapproved comments are marked for the user’s awareness, awaiting admin approval.
 
 ![Walk comment box](images/walk-detail-pic5.jpg)
 
 ## About Us Page
 
-* The About us page contains useful information about the group of walkers that make up this passionate group. This content is created on the back end django administration.
+* The About Us page contains useful information about the group of walkers that make up this passionate group. This content is created on the back end django administration.
 
 ![About Header](images/about-pic1.jpg)
 
 
-* Registered and logged-in users can leave comments through a submission form. This encourages engagement and allows users to share their thoughts and experiences related to the walk.
+* Registered and logged-in users can complete a form for either a walk suggestion or a request to join the walk blog team. This encourages engagement and allows users to share their thoughts and experiences related to the walk.
 
 ![About Form](images/about-pic2.jpg)
 
