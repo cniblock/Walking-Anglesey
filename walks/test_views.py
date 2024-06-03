@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm
 
 class TestPostViews(TestCase):
@@ -41,3 +41,16 @@ class TestPostViews(TestCase):
         response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 200)
         self.assertRegex(response.content.decode('utf-8'), r'src="/static/images/default\.\w+\.jpg"')
+
+    def test_successful_comment_submission(self):
+        """Test for a successful comment submission"""
+        self.client.login(username="myUsername", password="myPassword")
+        comment_data = {
+            'name': 'test name',
+            'email': 'test@email.com',
+            'body': 'test comment'
+        }
+        response = self.client.post(reverse('post_detail', args=['post-title']), data=comment_data)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(
+            b'Comment submitted and awaiting approval', response.content)
