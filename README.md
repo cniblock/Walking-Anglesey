@@ -173,13 +173,43 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 
 ### Future Implementations
 
+In future updates, we plan to add the following features to enhance the user experience and functionality of the Walk Anglesey website:
+
+* User Profiles: Allow users to create and customize their own profiles.
+* Favorite Walks: Enable users to save their favorite walks for easy access later.
+* Like Functionality: Implement a like feature for users to express their appreciation for specific walks and posts.
+* Wildlife Section: Add a dedicated section for wildlife sightings and information, enriching the content with details about the flora and fauna encountered on walks.
+* Photo Drop Box: Create a section where users can share their own images from walks, contributing to a community-driven gallery.
+* Social Sharing: Integrate social media sharing options for users to share walks on their social networks.
+
+These features aim to build a more interactive, engaging, and community-focused platform for all users.
+
 ### Accessibility 
+
+We are committed to making Walk Anglesey accessible to all users, including those with disabilities. Future implementations will include:
 
 ## Technologies Used
 
 ### Languages Used
 
+* HTML5: For structuring the content.
+* CSS3: For styling the content.
+* JavaScript: For interactive elements and functionalities.
+* Python: For back-end development with Django framework.
+
 ### Frameworks, Libraries and programmes used
+
+* Django: A high-level Python web framework that encourages rapid development and clean, pragmatic design.
+* Bootstrap: A popular front-end framework for developing responsive and mobile-first websites using HTML, CSS, and JavaScript.
+* Django Allauth: A package for Django that provides a comprehensive set of user authentication, registration, and account management tools.
+* Cloudinary: A cloud-based service that offers comprehensive image and video management, including storage, transformation, and delivery.
+* Google Maps API: An application programming interface that allows you to embed Google Maps on your web pages and customize them with your own content.
+* OpenWeatherMap API: A service that provides weather data, including current weather, forecasts, and historical data to developers through an API.
+* Django Crispy Forms: A Django application that helps you create beautiful, Bootstrap-compatible forms easily.
+* Django Summernote: A package for integrating the Summernote WYSIWYG editor into Django projects, enabling rich text editing.
+* Gunicorn: A Python WSGI HTTP server for running web applications, commonly used to serve Django applications in production.
+* Whitenoise: A middleware for Django that helps serve static files efficiently in production.
+* PostgreSQL: An advanced, open-source relational database management system known for its reliability and robustness.
 
 ## Deployment & Local Development
 
