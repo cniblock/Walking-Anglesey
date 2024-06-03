@@ -14,9 +14,9 @@ The website offers detailed walk guides, user-contributed posts, weather informa
 
 ## User Experience 
 
-### Initial Website Concept 
+### Website Concept 
 
-[Walk Anglesey!](https://walk-anglesey-84445998906a.herokuapp.com/) is a new walking blog website build from the ground up, with 2 main goals. To showcase the fantastic walks on Anglesey and also to create a community. By developing a welcoming and easy to use website, we want to attract new users to become part of our walking family.
+[Walk Anglesey](https://walk-anglesey-84445998906a.herokuapp.com/) is a new walking blog website build from the ground up, with 2 main goals. To showcase the fantastic walks on Anglesey and also to create a community. By developing a welcoming and easy to use website, we want to attract new users to become part of our walking family.
 
 To create a passionate community we welcome new users to comment on our walk posts, sign up to news letters and also to get in touch with us and become bloggers themselves, so they can share their love and knowledge of walks on Anglesey.
 
@@ -34,11 +34,26 @@ To create a passionate community we welcome new users to comment on our walk pos
 
 ### User Stories
 
-### Client/Admin Goals
+#### Owner/Admin Goals
 
-### User goals
+* The website needs to be responsive on all devices to ensure a good user experience.
+* Ease of use for admin users to create, edit, and delete their own walk blogs and owner can manage all content.
+* Ability to moderate comments and manage user interactions to maintain a positive community environment.
+* Users wishing to collaborate can be viewed and managed in the back end, facilitating easy communication and coordination.
 
-### Visitor goals
+#### Registered User Goals
+
+* Ability to create an account and log in securely.
+* Option to comment on blog posts, sharing their thoughts and experiences about different walks.
+* Has the ability to reach out to site owner to recommend walks or become a blogger themselves.
+* Option to sign up for newsletters to stay updated on new walks, community news, and other relevant information.
+
+#### Visitor Goals
+
+* Easy navigation to explore the website and find information about various walks on Anglesey.
+* Access to general content without needing to register, such as detailed walk guides, maps, and weather information.
+* Encouragement to register for an account to access more features and participate in the community.
+* Access to subscribe form to join the Newsletter group.
 
 ## Design
 
