@@ -59,6 +59,14 @@ To create a passionate community we welcome new users to comment on our walk pos
 
 ### Colour Scheme
 
+The colour scheme selected for the website is inspired by nautical themes, reflecting the fresh and vibrant colours walkers would encounter on their coastal walks around Anglesey. The design aims to create a clean, uncluttered, and welcoming environment for users, enhancing their browsing experience and making navigation intuitive.
+
+These are the colours we used
+
+![Colours](images/ux-colours.jpg)
+
+The color scheme features #F9FAFC for a light, airy background, #006b99 for primary text and buttons representing the sea, #004e73 for dynamic hover effects, #fff for clean text and backgrounds, and #848484 for neutral secondary elements, creating a cohesive and uncluttered nautical theme.
+
 ### Typography
 
 ### Imagaary
