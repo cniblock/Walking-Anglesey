@@ -135,24 +135,28 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 ![Walk Header](images/walk-detail-pic1.jpg)
 
 
-* The main content area displays the detailed description of the walk. This includes the author’s narrative and photographs related to the walk, making it informative and engaging.
+* The main content area displays the detailed description of the walk. This includes the author’s narrative and photographs related to the walk, making it informative and engaging highlighting the points of interest walkers will see along the way.
 
 ![Walk pictures](images/walk-detail-pic2.jpg)
 
 
-* This section provides a map of the walking route, allowing users to visualize the path. Additionally, it includes real-time weather information for the location, helping users prepare for their walk.
+* Beneath the main walk content follows a map of the walking route, allowing users to visualize the path. Additionally, it includes real-time weather information for the location, helping users prepare for their walk.
 
 ![Walk Map and Weather](images/walk-detail-pic3.jpg)
 
 
-* Below the post content, there is a section that displays comments left by other users. Each comment shows the author, creation date, and content, fostering community interaction.
+* Below the post content and route map and weather, there is a section that displays comments left by other users. Each comment shows the author, creation date, and content, fostering community interaction.
 
 ![Walk Comment](images/walk-detail-pic4.jpg)
 
 
+* Users can create, delete or edit their own comments, and unapproved comments are marked for the user’s awareness, maintaining a positive community.
+
 ![Walk comment box](images/walk-detail-pic5.jpg)
 
 ## About Us Page
+
+* The About us page contains useful information about the group of walkers that make up this passionate group. This content is created on the back end django administraion.
 
 ![About Header](images/about-pic1.jpg)
 
@@ -162,6 +166,8 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 ![About Form](images/about-pic2.jpg)
 
 ### Newsletter Subscrirption Page
+
+* The Subscribe page also contains a hero image which is randomly selected from the walk blogs. Following that is some information for the user and an email and submit function. This information is then sent to the back end for the site owener to send out the Newsletters.
 
 ![Subscribe Form](images/subscribe-pic1.jpg)
 
