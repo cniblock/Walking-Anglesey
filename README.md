@@ -61,7 +61,7 @@ To create a passionate community we welcome new users to comment on our walk pos
 
 The colour scheme selected for the website is inspired by nautical themes, reflecting the fresh and vibrant colours walkers would encounter on their coastal walks around Anglesey. The design aims to create a clean, uncluttered, and welcoming environment for users, enhancing their browsing experience and making navigation intuitive.
 
-These are the colours we used
+These are the colours we used:
 
 ![Colours](images/ux-colours.jpg)
 
@@ -79,11 +79,15 @@ Imagery plays a crucial role in the design, with high-quality photos of Anglesey
 
 With a carefully chosen colour scheme, typography, and layout, Walk Anglesey aims to create a welcoming and user-friendly site that invites you to explore and be part of our walking community.
 
-### Wireframes
-
 ## Features
 
-### General Features on each page
+The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page, About page and a Newsletter sign up page.
+
+### All pages on the website are responsive and have:
+
+* favicon in the web browser tab
+
+
 
 ### Pictures
 
