@@ -83,58 +83,81 @@ With a carefully chosen colour scheme, typography, and layout, Walk Anglesey aim
 
 The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page, About page and a Newsletter sign up page.
 
-### All pages on the website are responsive and have:
+## All pages on the website are responsive and have:
 
 * favicon in the web browser tab:
 
 ![favicon](images/fav-pic.jpg)
 
+
 * Every page has a responsive Navbar:
 
 ![Navbar](images/nav-pic.jpg)
+
 
 * There is a footer with social media links on each page:
 
 ![footer](images/footer-pic.jpg)
 
 
-### The Home Page
+## The Home Page
 
 * A large header image taken by the site owner.
 
 ![header image](images/header-pic.jpg)
 
+
 * Introductory text, A section with a detailed introduction about the website, its purpose, and the types of walking routes and experiences available on Anglesey.
 
 ![Intro Text](images/intro-pic.jpg)
+
 
 * The Interactive map, An embedded Google Map to display walking route locations, enhancing the user's ability to explore visually.
 
 ![Map](images/map-pic.jpg)
 
+
 * A section titled "Walk Blogs" to highlight recent posts. Blog entries displayed in a card layout with images, titles, excerpts, and authors. Pagination to navigate through multiple blog post pages if needed. These blogs are selected from the back end in a random format 
 
 ![Homepage Walks](images/home-walks-pic.jpg)
 
-### Walk Blog List Page
+
+## Walk Blog List Page
+
+* The Walks blog page starts with a randomised image from one of the walk blogs, to offer a unique experience each time a user visits the page. Following that is a list of all the walk blogs featured on the site.
 
 ![Walk Page Pic](images/walkpage-pic.jpg)
 
-### Walk Blog Detail
+## Walk Blog Detail
+
+* The top of the page includes a large header image that either displays the featured image of the post or a default placeholder image. Overlaid on this image are the title, author, creation date, and difficulty level of the walk.
 
 ![Walk Header](images/walk-detail-pic1.jpg)
 
+
+* The main content area displays the detailed description of the walk. This includes the author’s narrative and photographs related to the walk, making it informative and engaging.
+
 ![Walk pictures](images/walk-detail-pic2.jpg)
+
+
+* This section provides a map of the walking route, allowing users to visualize the path. Additionally, it includes real-time weather information for the location, helping users prepare for their walk.
 
 ![Walk Map and Weather](images/walk-detail-pic3.jpg)
 
+
+* Below the post content, there is a section that displays comments left by other users. Each comment shows the author, creation date, and content, fostering community interaction.
+
 ![Walk Comment](images/walk-detail-pic4.jpg)
+
 
 ![Walk comment box](images/walk-detail-pic5.jpg)
 
-### About Us Page
+## About Us Page
 
 ![About Header](images/about-pic1.jpg)
+
+
+* Registered and logged-in users can leave comments through a submission form. This encourages engagement and allows users to share their thoughts and experiences related to the walk.
 
 ![About Form](images/about-pic2.jpg)
 
