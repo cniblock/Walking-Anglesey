@@ -1,6 +1,8 @@
 # Walk Anglesey Blog Website
 
-blurb
+Walk Anglesey is a blogging website focused on sharing walking routes and encouraging a vibrant community of users passionate about exploring the Isle of Anglesey. 
+
+The website offers detailed guides, user-contributed posts, weather information, and an interactive map to help users discover and enjoy the amazing walks on the Isle of Anglesey
 
 image
 
@@ -46,7 +48,7 @@ shields.oi?
 
 ### Languages Used
 
-### Frameworks, libraries and programmes used
+### Frameworks, Libraries and programmes used
 
 ## Deployment & Local Development
 
