@@ -2,7 +2,7 @@
 
 Walk Anglesey is a blogging website focused on sharing walking routes and encouraging a vibrant community of users passionate about exploring the Isle of Anglesey. 
 
-The website offers detailed walk guides, user-contributed posts, weather information, and an interactive map to help users discover and enjoy the amazing walks on offer. Lets [Walk Anglesey!](https://walk-anglesey-84445998906a.herokuapp.com/)
+The website offers detailed walk guides, user-contributed posts, weather information, and an interactive map to help users discover and enjoy the amazing walks on offer. Let's [Walk Anglesey!](https://walk-anglesey-84445998906a.herokuapp.com/)
 
 ![Hero Image](images/hero-image.jpg)
 
@@ -16,21 +16,21 @@ The website offers detailed walk guides, user-contributed posts, weather informa
 
 ### Website Concept 
 
-[Walk Anglesey](https://walk-anglesey-84445998906a.herokuapp.com/) is a new walking blog website build from the ground up, with 2 main goals. To showcase the fantastic walks on Anglesey and also to create a community. By developing a welcoming and easy to use website, we want to attract new users to become part of our walking family.
+[Walk Anglesey](https://walk-anglesey-84445998906a.herokuapp.com/) is a new walking blog website build from the ground up, with 2 main goals. To showcase the fantastic walks on Anglesey and to create a community. By developing a welcoming and easy to use website, we want to attract new users to become part of our walking family.
 
-To create a passionate community we welcome new users to comment on our walk posts, sign up to news letters and also to get in touch with us and become bloggers themselves, so they can share their love and knowledge of walks on Anglesey.
+To create a passionate community, we welcome new users to comment on our walk posts, sign up to newsletters and also to get in touch with us and become bloggers themselves, so they can share their love and knowledge of walks on Anglesey.
 
 ### Key Features of the Website
 
 * Welcome page with key information about the website.
 * Interactive Map with walk route locations.
-* Highly Detailed walk route information.
+* Highly Detailed Walk route information.
 * Pictures of each walk and points of interest along the route.
 * Difficulty rating for each walk.
 * Live Weather information.
 * Comment on walk blogs.
 * Collaboration form for users to get in touch with site owner.
-* News letter that site users can sign up to.
+* Newsletter that site users can sign up to.
 
 ### User Stories
 
@@ -71,7 +71,7 @@ The color scheme features #F9FAFC for a light, airy background, #006b99 for prim
 
 We selected "Lato" for its modern and friendly look, using bold for headings to draw attention and lighter weights for body text to ensure readability. Additionally, "Helvetica" is used in the walk blogs to provide a clear and professional appearance, complementing the overall clean design of the website.
 
-### Imagaary & Layout
+### Imagery & Layout
 
 The website is designed to look great on any device, from desktops to mobile phones, so you get a smooth experience no matter how you browse. We've made sure navigation, the interactive map, weather information, and walk guides are easy to find and use.
 
@@ -112,7 +112,7 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 ![Intro Text](images/intro-pic.jpg)
 
 
-* The Interactive map, An embedded Google Map to display walking route locations, enhancing the user's ability to explore visually.
+* The Interactive map, an embedded Google Map to display walking route locations, enhancing the user's ability to explore visually.
 
 ![Map](images/map-pic.jpg)
 
@@ -156,7 +156,7 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 
 ## About Us Page
 
-* The About us page contains useful information about the group of walkers that make up this passionate group. This content is created on the back end django administraion.
+* The About us page contains useful information about the group of walkers that make up this passionate group. This content is created on the back end django administration.
 
 ![About Header](images/about-pic1.jpg)
 
@@ -165,13 +165,13 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 
 ![About Form](images/about-pic2.jpg)
 
-### Newsletter Subscrirption Page
+### Newsletter Subscription Page
 
-* The Subscribe page also contains a hero image which is randomly selected from the walk blogs. Following that is some information for the user and an email and submit function. This information is then sent to the back end for the site owener to send out the Newsletters.
+* The Subscribe page also contains a hero image which is randomly selected from the walk blogs. Following that is some information for the user and an email and submit function. This information is then sent to the back end for the site owner to send out the Newsletters.
 
 ![Subscribe Form](images/subscribe-pic1.jpg)
 
-### Future Implementaions
+### Future Implementations
 
 ### Accessibility 
 
