@@ -1,8 +1,8 @@
 from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User
-from .models import Post, Comment
-from .forms import CommentForm
+from .models import Post, Comment, NewsletterSubscriber
+from .forms import CommentForm, NewsletterSubscriptionForm
 
 class TestPostViews(TestCase):
 
@@ -54,3 +54,12 @@ class TestPostViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(
             b'Comment submitted and awaiting approval', response.content)
+        
+    def test_successful_newsletter_subscription(self):
+        post_data = {
+            'email': 'test_subscriber@example.com',
+        }
+        response = self.client.post(reverse('subscribe_newsletter'), data=post_data)
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('home'))
+        self.assertTrue(NewsletterSubscriber.objects.filter(email='test_subscriber@example.com').exists()) 
