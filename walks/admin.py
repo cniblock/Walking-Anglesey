@@ -6,12 +6,13 @@ from django.urls import path
 from django.shortcuts import render
 from .models import Post, Comment, NewsletterSubscriber
 from django_summernote.admin import SummernoteModelAdmin
-from .forms import NewsletterForm
+from .forms import NewsletterForm, PostForm
 
 BATCH_SIZE = 10
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
+    form = PostForm  # Use PostForm here
     list_display = ('title', 'slug', 'status', 'created_on', 'difficulty')
     search_fields = ['title', 'content']
     list_filter = ('status', 'created_on', 'difficulty')
