@@ -6,9 +6,9 @@ The website offers detailed walk guides, user-contributed posts, weather informa
 
 ![Hero Image](images/hero-image.jpg)
 
-### [View Walk Anglesey hoested on Heroku](https://walk-anglesey-84445998906a.herokuapp.com/)
+### [View Walk Anglesey hosted on Heroku](https://walk-anglesey-84445998906a.herokuapp.com/)
 
-(https://img.shields.io/badge/Last_Commit-4th_June-orange)
+![Github contributers](https://img.shields.io/badge/Last_Commit-4th_June-orange)
 
 ## Project Information
 
