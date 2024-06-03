@@ -85,11 +85,51 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 
 ### All pages on the website are responsive and have:
 
-* favicon in the web browser tab
+* favicon in the web browser tab:
+![favicon](images/fav-pic.jpg)
+
+* Every page has a responsive Navbar:
+![Navbar](images/nav-pic.jpg)
+
+* There is a footer with social media links on each page:
+![footer](images/footer-pic.jpg)
 
 
+### The Home Page
 
-### Pictures
+![header image](images/header-pic.jpg)
+
+![Intro Text](images/intro-pic.jpg)
+
+![Map](images/map-pic.jpg)
+
+![Homepage Walks](images/home-walks-pic.jpg)
+
+### Walk Blog List Page
+
+![Walk Page Pic](images/walkpage-pic.jpg)
+
+### Walk Blog Detail
+
+![Walk Header](images/walk-detail-pic1.jpg)
+
+![Walk pictures](images/walk-detail-pic2.jpg)
+
+![Walk Map and Weather](images/walk-detail-pic3.jpg)
+
+![Walk Comment](images/walk-detail-pic4.jpg)
+
+![Walk comment box](images/walk-detail-pic5.jpg)
+
+### About Us Page
+
+![About Header](images/about-pic1.jpg)
+
+![About Form](images/about-pic2.jpg)
+
+### Newsletter Subscrirption Page
+
+![Subscribe Form](images/subscribe-pic1.jpg)
 
 ### Future Implementaions
 
@@ -104,6 +144,10 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 ## Deployment & Local Development
 
 ## Testing
+
+![HTML Validation](images/W3C-validator.jpg)
+
+![CSS Validation](images/css-validation.jpg)
 
 ## Credits
 
