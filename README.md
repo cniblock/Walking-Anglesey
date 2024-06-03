@@ -8,7 +8,8 @@ The website offers detailed walk guides, user-contributed posts, weather informa
 
 ### [View Walk Anglesey hosted on Heroku](https://walk-anglesey-84445998906a.herokuapp.com/)
 
-![Last commit](https://img.shields.io/badge/Last_Commit-4th_June-orange)![W3C Validation](https://img.shields.io/badge/W3C-validated-green)
+![Last commit](https://img.shields.io/badge/Last_Commit-4th_June-orange)![W3C Validation](https://img.shields.io/badge/W3C-validated-green)[Languages](https://img.shields.io/badge/Languages-4-blue)
+[Frameworks](https://img.shields.io/badge/Frameworks-2-blue)
 
 ## Project Information
 
