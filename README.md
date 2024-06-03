@@ -2,9 +2,9 @@
 
 Walk Anglesey is a blogging website focused on sharing walking routes and encouraging a vibrant community of users passionate about exploring the Isle of Anglesey. 
 
-The website offers detailed guides, user-contributed posts, weather information, and an interactive map to help users discover and enjoy the amazing walks on the Isle of Anglesey
+The website offers detailed guides, user-contributed posts, weather information, and an interactive map to help users discover and enjoy the amazing walks on offer. Lets Walk Anglesey!
 
-image
+![Hero Image](images/readme/hero-image.jpg)
 
 link
 
