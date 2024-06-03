@@ -86,12 +86,15 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 ### All pages on the website are responsive and have:
 
 * favicon in the web browser tab:
+
 ![favicon](images/fav-pic.jpg)
 
 * Every page has a responsive Navbar:
+
 ![Navbar](images/nav-pic.jpg)
 
 * There is a footer with social media links on each page:
+
 ![footer](images/footer-pic.jpg)
 
 
