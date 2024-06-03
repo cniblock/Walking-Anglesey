@@ -4,7 +4,7 @@ Walk Anglesey is a blogging website focused on sharing walking routes and encour
 
 The website offers detailed guides, user-contributed posts, weather information, and an interactive map to help users discover and enjoy the amazing walks on offer. Lets Walk Anglesey!
 
-![Hero Image](images/readme/hero-image.jpg)
+![Hero Image](/workspaces/Walking-Anglesey/static/images/readme/hero-image.jpg)
 
 link
 
