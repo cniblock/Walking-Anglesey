@@ -100,11 +100,19 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 
 ### The Home Page
 
+* A large header image taken by the site owner.
+
 ![header image](images/header-pic.jpg)
+
+* Introductory text, A section with a detailed introduction about the website, its purpose, and the types of walking routes and experiences available on Anglesey.
 
 ![Intro Text](images/intro-pic.jpg)
 
+* The Interactive map, An embedded Google Map to display walking route locations, enhancing the user's ability to explore visually.
+
 ![Map](images/map-pic.jpg)
+
+* A section titled "Walk Blogs" to highlight recent posts. Blog entries displayed in a card layout with images, titles, excerpts, and authors. Pagination to navigate through multiple blog post pages if needed. These blogs are selected from the back end in a random format 
 
 ![Homepage Walks](images/home-walks-pic.jpg)
 
