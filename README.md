@@ -2,13 +2,13 @@
 
 Walk Anglesey is a blogging website focused on sharing walking routes and encouraging a vibrant community of users passionate about exploring the Isle of Anglesey. 
 
-The website offers detailed guides, user-contributed posts, weather information, and an interactive map to help users discover and enjoy the amazing walks on offer. Lets Walk Anglesey!
+The website offers detailed walk guides, user-contributed posts, weather information, and an interactive map to help users discover and enjoy the amazing walks on offer. Lets [Walk Anglesey!](https://walk-anglesey-84445998906a.herokuapp.com/)
 
 ![Hero Image](images/hero-image.jpg)
 
-link
+### [View Walk Anglesey hoested on Heroku](https://walk-anglesey-84445998906a.herokuapp.com/)
 
-shields.oi?
+(https://img.shields.io/badge/Last_Commit-4th_June-orange)
 
 ## Project Information
 
