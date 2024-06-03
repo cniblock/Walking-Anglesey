@@ -120,6 +120,11 @@ body {
     color: lightgray;
 }
 
+.post-content img {
+    max-width: 100%;
+    height: auto;
+}
+
 .post-difficulty {
     display: inline-block;
     background-color: #006b99;
