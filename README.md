@@ -512,4 +512,4 @@ https://openweathermap.org/
 
 ### Acknowledegments 
 
-I'd like to take the oppertunity to thank the Code Institute team for their support and the amazing community on slack who are always there to help, no matter that time of the day it is. Tomas_K !
+I'd like to take the opportunity to thank the Code Institute team for their support and the amazing community on slack who are always there to help, no matter that time of the day it is. Tomas_K !
