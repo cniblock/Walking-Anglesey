@@ -37,8 +37,8 @@ def post_detail(request, slug):
                 request, messages.SUCCESS,
                 'Comment submitted and awaiting approval'
             )
-    comment_form = CommentForm()
-    
+    comment_form = CommentForm()  
+
     # Fetch weather data for the location
     weather_data = get_weather("Anglesey")
 
