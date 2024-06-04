@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 from .models import Post, Comment, NewsletterSubscriber
 from .forms import CommentForm, NewsletterSubscriptionForm
 
-
 class TestPostViews(TestCase):
 
     def setUp(self):
@@ -41,8 +40,7 @@ class TestPostViews(TestCase):
         self.post.save()
         response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 200)
-        self.assertRegex(response.content.decode('utf-8'), 
-        r'src="/static/images/default\.\w+\.jpg"')
+        self.assertRegex(response.content.decode('utf-8'), r'src="/static/images/default\.\w+\.jpg"')
 
     def test_successful_comment_submission(self):
         """Test for a successful comment submission"""
@@ -52,8 +50,7 @@ class TestPostViews(TestCase):
             'email': 'test@email.com',
             'body': 'test comment'
         }
-        response = self.client.post(reverse('post_detail', 
-        args=['post-title']), data=comment_data)
+        response = self.client.post(reverse('post_detail', args=['post-title']), data=comment_data)
         self.assertEqual(response.status_code, 200)
         self.assertIn(
             b'Comment submitted and awaiting approval', response.content)
@@ -62,9 +59,7 @@ class TestPostViews(TestCase):
         post_data = {
             'email': 'test_subscriber@example.com',
         }
-        response = self.client.post(reverse('subscribe_newsletter'), 
-        data=post_data)
+        response = self.client.post(reverse('subscribe_newsletter'), data=post_data)
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse('home'))
-        self.assertTrue(NewsletterSubscriber.objects.filter(
-            email='test_subscriber@example.com').exists()) 
+        self.assertTrue(NewsletterSubscriber.objects.filter(email='test_subscriber@example.com').exists())
