@@ -464,11 +464,39 @@ Checks that the message field is required in the collaborate form.
 
 ![jshint](images/jshint.jpg)
 
+* Python
+
+All Python code has been passed through Code Institute Python Linter tool and no major errors were found. There are however several "line too long" and "trailing whitespace" errrs and suggestions. These erros have no majot impact on the website but future iterations of the website will address these suggestions.
+
+### Deployment
+
+The application has been deployed to heroku. The steps taken were:
+
+In heroku:
+
+* Open the "new" menu and click on "Create new app".
+* Fill form fields with app name and region (Europe). Click on "Create app".
+* In the "Settings" section, click on "Add buildpack" and add Python.
+* In the "Settings" section, add the following config variables: ALLOWED_HOSTS, CLOUDINARY_URL, DATABASE_URL, PORT, SECRET_KEY.
+* In "Deployment method", select the GitHub option and provide the repository details. Click on "Connect".
+* Click on "Enable Automatic Deploys" and finally, click on "Deploy Branch".
+
 ### Bugs
 
-## Credits
+#### Known Issues
 
-### Code used
+* The Send_Newsletter function is currently unavailable. The html and form has been set up but as of deployment, the superuser is unable to send the Newsletter to all subscribers.
+
+* Googlemaps error in console suggesting to use AdvancedMarker, however, when this is implemtented, the map does not work.
+![googlemapserror 1](images/googlemap-error.jpg)
+
+* Performance issue with Googlemaps
+![googlemapserror 2](images/googlemap-error-2.jpg)
+
+* Error related to Cloundinary image links being http instead of https
+![https](images/https-error.jpg)
+
+## Credits
 
 ### Content
 
