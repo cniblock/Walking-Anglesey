@@ -186,7 +186,9 @@ These features aim to build a more interactive, engaging, and community-focused 
 
 ### Accessibility 
 
-We are committed to making Walk Anglesey accessible to all users, including those with disabilities. Future implementations will include:
+We are committed to making Walk Anglesey accessible to all users, including those with disabilities.
+
+![Lighthouse](images/lighthouse.jpg)
 
 ## Technologies Used
 
@@ -388,6 +390,65 @@ Throughout the development of this project, manual testing has been conducted to
 ![General tests](images/general-test.jpg)
 
 #### Automated Testing
+
+#### TestPostViews:
+**test_render_post_detail_page_with_comment_form:**
+
+* Checks if the post detail page renders correctly and contains the post title, content, and a comment form.
+
+**test_render_post_list_page:**
+
+* Verifies if the post list page renders correctly and contains the post title and excerpt.
+
+**test_render_post_list_page_with_placeholder_image:**
+
+* Ensures that the post list page renders with a placeholder image if no featured image is provided for a post.
+
+**test_successful_comment_submission:**
+
+* Tests the successful submission of a comment on a post. It verifies if the comment submission returns a success message.
+
+**test_successful_newsletter_subscription:**
+
+* Tests the successful subscription to the newsletter. It verifies if the subscription redirects to the home page and adds the subscriber to the database.
+
+#### TestCommentForm:
+
+**test_form_is_valid:**
+
+* Checks if the comment form is valid when provided with valid data.
+
+**test_form_is_invalid:**
+
+* Verifies that the comment form is invalid when submitted with empty data.
+
+### TestAboutView:
+
+**test_render_about_page_with_collaborate_form:**
+
+* Checks if the about page renders correctly and contains the about content and a collaboration form.
+
+**test_successful_collaboration_request_submission:**
+
+* Tests the successful submission of a collaboration request. It verifies if the request submission returns a success message.
+
+#### TestCollaborateForm:
+
+**test_form_is_valid:**
+
+* Tests if the collaborate form is valid when provided with valid data for all fields.
+
+**test_name_is_required:**
+
+* Verifies that the name field is required in the collaborate form.
+
+**test_email_is_required:**
+
+* Ensures that the email field is required in the collaborate form.
+
+**test_message_is_required:**
+
+Checks that the message field is required in the collaborate form.
 
 ### Code Validation
 
