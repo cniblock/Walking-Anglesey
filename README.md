@@ -16,7 +16,7 @@ The website offers detailed walk guides, user-contributed posts, weather informa
 
 ### Website Concept 
 
-[Walk Anglesey](https://walk-anglesey-84445998906a.herokuapp.com/) is a new walking blog website build from the ground up, with 2 main goals. To showcase the fantastic walks on Anglesey and to create a community. By developing a welcoming and easy to use website, we want to attract new users to become part of our walking family.
+[Walk Anglesey](https://walk-anglesey-84445998906a.herokuapp.com/) is a new walking blog website built from the ground up, with 2 main goals. To showcase the fantastic walks on Anglesey and to create a community. By developing a welcoming and easy to use website, we want to attract new users to become part of our walking family.
 
 To create a passionate community, we welcome new users to comment on our walk posts, sign up to newsletters and also to get in touch with us and become bloggers themselves, so they can share their love and knowledge of walks on Anglesey.
 
