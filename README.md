@@ -175,12 +175,12 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 
 In future updates, we plan to add the following features to enhance the user experience and functionality of the Walk Anglesey website:
 
-* User Profiles: Allow users to create and customize their own profiles.
-* Favorite Walks: Enable users to save their favorite walks for easy access later.
-* Like Functionality: Implement a like feature for users to express their appreciation for specific walks and posts.
-* Wildlife Section: Add a dedicated section for wildlife sightings and information, enriching the content with details about the flora and fauna encountered on walks.
-* Photo Drop Box: Create a section where users can share their own images from walks, contributing to a community-driven gallery.
-* Social Sharing: Integrate social media sharing options for users to share walks on their social networks.
+* **User Profiles**: Allow users to create and customize their own profiles.
+* **Favorite Walks**: Enable users to save their favorite walks for easy access later.
+* **Like Functionality**: Implement a like feature for users to express their appreciation for specific walks and posts.
+* **Wildlife Section**: Add a dedicated section for wildlife sightings and information, enriching the content with details about the flora and fauna encountered on walks.
+* **Photo Drop Box**: Create a section where users can share their own images from walks, contributing to a community-driven gallery.
+* **Social Sharing**: Integrate social media sharing options for users to share walks on their social networks.
 
 These features aim to build a more interactive, engaging, and community-focused platform for all users.
 
@@ -213,11 +213,50 @@ We are committed to making Walk Anglesey accessible to all users, including thos
 
 ## Deployment & Local Development
 
+### Agile Development
+
+![Agile Development](images/agile-development.jpg)
+
+### Models
+
+The following models are used in this application:
+
+### Entity Relationshop Diagram
+
+#### Post Model
+
+The Post model represents a blog post or article. It has the following fields:
+
+![Post Model](images/erd-1.jpg)
+
+The Post model has a many-to-one relationship with the User model through the author foreign key.
+
+#### Comment Model
+
+The Comment model represents a comment left on a blog post. It has the following fields:
+
+![Comment Model](images/erd-2.jpg)
+
+The Comment model has a many-to-one relationship with the Post model through the post foreign key.
+
+#### Newsletter Model
+
+The NewsletterSubscriber model represents a subscriber to a newsletter. It has the following fields:
+
+![Newsletter Model](images/erd-3.jpg)
+
 ## Testing
+
+* HTML Validation Pass
 
 ![HTML Validation](images/W3C-validator.jpg)
 
+
+w3c Validation Pass
+
 ![CSS Validation](images/css-validation.jpg)
+
+### Bugs
 
 ## Credits
 
