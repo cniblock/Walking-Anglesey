@@ -251,7 +251,7 @@ The Comment model has a many-to-one relationship with the Post model through the
 
 The About model represents information about the application. It has the following fields:
 
-![About Model](images/erd-5.jpg)
+![About Model](images/erd-4.jpg)
 
 #### CollaborateRequest Model
 
@@ -466,7 +466,7 @@ Checks that the message field is required in the collaborate form.
 
 * Python
 
-All Python code has been passed through Code Institute Python Linter tool and no major errors were found. There are however several "line too long" and "trailing whitespace" errrs and suggestions. These erros have no majot impact on the website but future iterations of the website will address these suggestions.
+All Python code has been passed through Code Institute Python Linter tool and no major errors were found. There are however several "line too long" and "trailing whitespace" errors and suggestions. These errors have no major impact on the website but future iterations of the website will address these suggestions.
 
 ### Deployment
 
