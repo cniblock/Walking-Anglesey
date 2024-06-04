@@ -498,8 +498,18 @@ In heroku:
 
 ## Credits
 
-### Content
-
 ### Media
 
+* Code Institute django blog walk through.
+
+* All Images are linked from googleimages and are only intended for educational purposes.
+
+* Googlemaps 
+https://developers.google.com/maps
+
+* Weather App API
+https://openweathermap.org/
+
 ### Acknowledegments 
+
+I'd like to take the oppertunity to thank the Code Institute team for their support and the amazing community on slack who are always there to help, no matter that time of the day it is. Tomas_K !
