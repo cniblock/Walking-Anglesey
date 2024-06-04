@@ -215,7 +215,13 @@ We are committed to making Walk Anglesey accessible to all users, including thos
 
 ### Agile Development
 
+When building this project, I used Agile methodology to keep things flexible, collaborative, and always improving. I broke down the project into smaller chunks and worked on each piece one at a time, making sure each part was solid before moving on to the next.
+
 ![Agile Development](images/agile-development.jpg)
+
+[Here is the current Project Board.](https://github.com/users/cniblock/projects/4)
+
+To define the project's scope and requirements, I used user stories with each story having a clearly defined set of acceptance criteria. This allowed me to ensure that everyone involved in the project shared a common understanding of what needed to be built and how it would be tested. However, due to time constraints, two user stories were prioritized as "won't have" using the MOSCOW model, meaning they will be part of the future development of the site.
 
 ### Models
 
@@ -244,6 +250,14 @@ The Comment model has a many-to-one relationship with the Post model through the
 The NewsletterSubscriber model represents a subscriber to a newsletter. It has the following fields:
 
 ![Newsletter Model](images/erd-3.jpg)
+
+### Forms
+
+### Views
+
+### URLs
+
+### Template
 
 ## Testing
 
