@@ -251,13 +251,13 @@ The Comment model has a many-to-one relationship with the Post model through the
 
 The About model represents information about the application. It has the following fields:
 
-![About Model](images/about-model.jpg)
+![About Model](images/erd-5.jpg)
 
 #### CollaborateRequest Model
 
 The CollaborateRequest model represents a collaboration request from another user. It has the following fields:
 
-![Collaboration Model](images/coloab-model.jpg)
+![Collaboration Model](images/erd-5.jpg)
 
 #### Newsletter Model
 
