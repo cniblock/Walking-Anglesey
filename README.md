@@ -186,7 +186,7 @@ These features aim to build a more interactive, engaging, and community-focused 
 
 ### Accessibility 
 
-We are committed to making Walk Anglesey accessible to all users, including those with disabilities.
+We are committed to making Walk Anglesey accessible to all users.
 
 ![Lighthouse](images/lighthouse.jpg)
 
