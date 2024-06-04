@@ -308,32 +308,43 @@ The project uses several views to handle user interactions and display data. Bel
 #### Post List View
 The Post List View displays a list of blog posts, with pagination and filtering by post status. It uses a template to display the list of posts.
 
-![]()
+![Post View](images/post-view.jpg)
 
 #### Post Detail View
 The Post Detail View displays a single blog post, along with its comments and weather data. It allows users to leave comments and edit or delete their own comments.
 
-![]()
+![Post detail view](images/post-detail-view.jpg)
+
+#### About View
+
+The About view is used to display information about the application. It also handles collaboration requests.
+
+![About View](images/about-view.jpg)
 
 #### Comment Edit View
 The Comment Edit View allows users to edit their own comments on a blog post.
 
-![]()
+![comment edit view](images/comment-edit-view.jpg)
 
 #### Comment Delete View
 The Comment Delete View allows users to delete their own comments on a blog post.
 
-![]()
+![comment delete view](images/comment-delete-view.jpg)
 
 #### Walks List View
 The Walks List View displays a list of all blog posts, with the option to display a random hero image.
 
-![]()
+![Walks List View](images/walklist-view.jpg)
 
 #### Subscribe Newsletter View
 The Subscribe Newsletter View allows users to subscribe to the newsletter by submitting their email address. It also displays a hero image.
 
-![]()
+![Subscribe Newsletter View](images/sub-news-view.jpg)
+
+#### Weather Function
+The get_weather function fetches the current weather data for a specified location using the OpenWeatherMap API.
+
+![Weather Function](images/weather-view.jpg)
 
 These views work together to provide a comprehensive blogging platform with commenting, editing, and deleting features, as well as newsletter subscription.
 
