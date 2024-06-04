@@ -367,12 +367,35 @@ Django templates provide a way to define the presentation layer of the applicati
 
 ## Testing
 
+Throughout the development of this project, manual testing has been conducted to ensure that the application functions as expected. Additionally, 13 automated tests have been written to cover a range of scenarios, including form validation and collaboration request submission. All of these tests have been run and have passed without issue, providing confidence in the stability and reliability of the application.
+
+#### Manual Testing
+
+* Registration
+
+![Registration Test](images/account-test.jpg)
+
+* Navbar
+
+![Navbar test](images/nav-test.jpg)
+
+* CRUD
+
+![CRUD Test](images/crud-test.jpg)
+
+* General Tests
+
+![General tests](images/general-test.jpg)
+
+#### Automated Testing
+
+### Code Validation
+
 * HTML Validation Pass
 
 ![HTML Validation](images/W3C-validator.jpg)
 
-
-w3c Validation Pass
+* w3c Validation Pass
 
 ![CSS Validation](images/css-validation.jpg)
 
