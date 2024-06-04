@@ -223,7 +223,7 @@ When building this project, I used Agile methodology to keep things flexible, co
 
 [Here is the current Project Board.](https://github.com/users/cniblock/projects/4)
 
-To define the project's scope and requirements, I used user stories with each story having a clearly defined set of acceptance criteria. This allowed me to ensure that everyone involved in the project shared a common understanding of what needed to be built and how it would be tested. However, due to time constraints, two user stories were prioritized as "won't have" using the MOSCOW model, meaning they will be part of the future development of the site.
+To define the project's scope and requirements, I used user stories with each story having a clearly defined set of acceptance criteria. Due to time constraints, two user stories were prioritized as "won't have" using the MOSCOW model, meaning they will be part of the future development of the site.
 
 ### Models
 
@@ -371,7 +371,7 @@ Django templates provide a way to define the presentation layer of the applicati
 
 Throughout the development of this project, manual testing has been conducted to ensure that the application functions as expected. Additionally, 13 automated tests have been written to cover a range of scenarios, including form validation and collaboration request submission. All of these tests have been run and have passed without issue, providing confidence in the stability and reliability of the application.
 
-#### Manual Testing
+### Manual Testing
 
 * Registration
 
@@ -389,7 +389,7 @@ Throughout the development of this project, manual testing has been conducted to
 
 ![General tests](images/general-test.jpg)
 
-#### Automated Testing
+### Automated Testing
 
 #### TestPostViews:
 **test_render_post_detail_page_with_comment_form:**
@@ -459,6 +459,10 @@ Checks that the message field is required in the collaborate form.
 * w3c Validation Pass
 
 ![CSS Validation](images/css-validation.jpg)
+
+* JSHint validation Pass
+
+![jshint](images/jshint.jpg)
 
 ### Bugs
 
