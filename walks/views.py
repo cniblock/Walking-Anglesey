@@ -56,22 +56,29 @@ def post_detail(request, slug):
 
 @login_required
 def comment_edit(request, slug, comment_id):
-    if request.method == "POST":
-        queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
-        comment = get_object_or_404(Comment, pk=comment_id)
-        comment_form = CommentForm(data=request.POST, instance=comment)
+    queryset = Post.objects.filter(status=1)
+    post = get_object_or_404(queryset, slug=slug)
+    comment = get_object_or_404(Comment, pk=comment_id)
 
-        if comment_form.is_valid() and comment.author == request.user:
+    if comment.author != request.user:
+        messages.add_message(request, messages.ERROR, 'You cannot edit comments that are not yours!')
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST, instance=comment)
+        if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.approved = False
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+            messages.add_message(request, messages.SUCCESS, 'Comment updated successfully!')
+            return HttpResponseRedirect(reverse('post_detail', args=[slug]))
         else:
             messages.add_message(request, messages.ERROR, 'Error updating comment!')
+    else:
+        comment_form = CommentForm(instance=comment)
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return render(request, 'walks/comment_edit.html', {'comment_form': comment_form, 'post': post, 'comment': comment})
 
 @login_required
 def comment_delete(request, slug, comment_id):

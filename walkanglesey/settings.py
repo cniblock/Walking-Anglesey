@@ -121,7 +121,7 @@ if 'test' in sys.argv:
     DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.codeanyapp.com",
+    'https://8000-cniblock-walkinganglese-ncn1tvuode7.ws-eu116.gitpod.io',
     "https://*.herokuapp.com"
 ]
 
