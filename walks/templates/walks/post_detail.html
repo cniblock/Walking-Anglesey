@@ -98,12 +98,7 @@
       <div class="card-body">
         {% for comment in comments %}
         <div class="p-2 comments {% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
-          <p class="font-weight-bold">
-            {{ comment.author }}
-            <span class="font-weight-normal">
-              {{ comment.created_on }}
-            </span> wrote:
-          </p>
+          <p><strong>{{ comment.author }} {{ comment.created_on }}</strong> wrote:</p>
           <div id="comment{{ comment.id }}">
             {{ comment.body | linebreaks }}
           </div>
