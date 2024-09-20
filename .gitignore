@@ -8,6 +8,3 @@ node_modules/
 .github/
 cloudinary_python.txt
 walks/fixtures/
-
-
-.env

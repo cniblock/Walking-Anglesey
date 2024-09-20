@@ -14,7 +14,8 @@ from pathlib import Path
 import os
 import sys
 import dj_database_url
-if os.path.isfile('env.py'):
+
+if os.path.exists('env.py'):
     import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,11 +29,15 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["8000-cniblock-walking-anglese-v7zv8333cx.us1.codeanyapp.com", '.herokuapp.com']
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    ".herokuapp.com",
+    '8000-cniblock-walkinganglese-ncn1tvuode7.ws-eu116.gitpod.io',
+]
 
 
 # Application definition
@@ -101,11 +106,19 @@ WSGI_APPLICATION = "walkanglesey.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
 DATABASES = {
-    'default': dj_database_url.parse(
-        os.environ.get('DATABASE_URL', 'sqlite:///db.sqlite3')  # Default to SQLite if DATABASE_URL is not set
-    )
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+if 'test' in sys.argv:
+    DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeanyapp.com",
