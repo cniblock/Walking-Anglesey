@@ -117,12 +117,6 @@ def walkslist(request):
     }
     return render(request, 'walks/walkslist.html', context)
 
-import random
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from .models import Post
-from .forms import NewsletterSubscriptionForm
-
 def subscribe_newsletter(request):
     posts = Post.objects.all()
     hero_image = None
