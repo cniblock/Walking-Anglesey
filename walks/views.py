@@ -117,6 +117,12 @@ def walkslist(request):
     }
     return render(request, 'walks/walkslist.html', context)
 
+import random
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .models import Post
+from .forms import NewsletterSubscriptionForm
+
 def subscribe_newsletter(request):
     posts = Post.objects.all()
     hero_image = None
@@ -130,6 +136,8 @@ def subscribe_newsletter(request):
             form.save()
             messages.success(request, "You have successfully subscribed to the newsletter.")
             return redirect('home')
+        else:
+            messages.error(request, "There was an error with your submission. Please check the form.")
     else:
         form = NewsletterSubscriptionForm()
 
