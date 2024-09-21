@@ -374,6 +374,40 @@ Django templates provide a way to define the presentation layer of the applicati
 ![Template 3](images/template-3.jpg)
 ![Template 4](images/template-4.jpg)
 
+## Custom Error Pages
+
+I have created custom error pages for **403**, **404**, and **500** errors to enhance user experience. Below are the details of each error page along with descriptions and screenshots.
+
+### 1. 404 Page Not Found
+
+This page is displayed when a user attempts to access a page that does not exist on the website. The page informs users that the requested page could not be found and provides a link to return to the homepage.
+
+#### Screenshot of 404 Page:
+![404 Page Screenshot](images/404_error_page.png)
+![404 Page Code](images/404_error_code.png)
+
+---
+
+### 2. 403 Forbidden
+
+This page is displayed when a user tries to access a page they don't have permission to view. The error page clearly communicates that the user does not have the necessary permissions to access the resource.
+
+#### Screenshot of 403 Page:
+![403 Page Screenshot](images/403-page-screenshot.jpg)
+![404 Page Code](images/403_error_code.png)
+
+---
+
+### 3. 500 Server Error
+
+This page is displayed when there is a server-side error. It informs the user that something went wrong on the server and provides an option to return to the home page.
+
+#### Screenshot of 500 Page:
+![500 Page Screenshot](images/500-page-screenshot.jpg)
+![404 Page Code](images/500_error_code.png)
+
+---
+
 ## Testing
 
 Throughout the development of this project, manual testing has been conducted to ensure that the application functions as expected. Additionally, 13 automated tests have been written to cover a range of scenarios, including form validation and collaboration request submission. All of these tests have been run and have passed without issue, providing confidence in the stability and reliability of the application.
