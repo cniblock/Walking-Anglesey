@@ -171,6 +171,13 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 
 ![Subscribe Form](images/subscribe-pic1.jpg)
 
+### Comment Edit Page
+
+* The **Comment Edit** page allows registered and logged-in users to update their comments on a walk blog. The form is pre-filled with the existing comment, and users can either update the comment or cancel the action, which takes them back to the walk details page.
+
+![Comment Edit Page](images/comment-edit-pic.jpg)
+
+
 ### Future Implementations
 
 In future updates, we plan to add the following features to enhance the user experience and functionality of the Walk Anglesey website:
@@ -326,12 +333,12 @@ The About view is used to display information about the application. It also han
 #### Comment Edit View
 The Comment Edit View allows users to edit their own comments on a blog post.
 
-![comment edit view](images/comment-edit-view.jpg)
+![comment edit view](images/comment-edit-view.png)
 
 #### Comment Delete View
 The Comment Delete View allows users to delete their own comments on a blog post.
 
-![comment delete view](images/comment-delete-view.jpg)
+![comment delete view](images/comment-delete-view.png)
 
 #### Walks List View
 The Walks List View displays a list of all blog posts, with the option to display a random hero image.
@@ -468,18 +475,116 @@ Checks that the message field is required in the collaborate form.
 
 All Python code has been passed through Code Institute Python Linter tool and no major errors were found. There are however several "line too long" and "trailing whitespace" errors and suggestions. These errors have no major impact on the website but future iterations of the website will address these suggestions.
 
-### Deployment
+## Deployment & Local Development
 
-The application has been deployed to heroku. The steps taken were:
+This project was developed using the Django framework and deployed to Heroku. Below is a step-by-step guide to deploy the project on Heroku and also run it locally on your machine.
 
-In heroku:
+### Deployment to Heroku
 
-* Open the "new" menu and click on "Create new app".
-* Fill form fields with app name and region (Europe). Click on "Create app".
-* In the "Settings" section, click on "Add buildpack" and add Python.
-* In the "Settings" section, add the following config variables: ALLOWED_HOSTS, CLOUDINARY_URL, DATABASE_URL, PORT, SECRET_KEY.
-* In "Deployment method", select the GitHub option and provide the repository details. Click on "Connect".
-* Click on "Enable Automatic Deploys" and finally, click on "Deploy Branch".
+1. **Create a Heroku account**:  
+   If you don’t have one, sign up for an account on [Heroku](https://www.heroku.com/).
+
+2. **Create a new app**:
+   - Log in to Heroku and click on "New" and then "Create new app".
+   - Choose an app name (this must be unique) and select your region (e.g., Europe).
+
+3. **Set up Buildpacks**:
+   - Go to the "Settings" tab of your app and scroll down to "Buildpacks".
+   - Add `Python` as a buildpack.
+   - Optionally, you can add `Node.js` as a buildpack if you’re using JavaScript-related tools.
+
+4. **Configure Environment Variables**:
+   - In the "Settings" tab, click "Reveal Config Vars".
+   - Add the following key-value pairs for your environment variables:
+     - `SECRET_KEY`: Your Django secret key.
+     - `CLOUDINARY_URL`: Your Cloudinary API key (if using Cloudinary for media).
+     - `DATABASE_URL`: This will be automatically set by Heroku after you add PostgreSQL.
+     - `ALLOWED_HOSTS`: Set to `your-app-name.herokuapp.com`.
+     - `DEBUG`: Set to `False` for production.
+
+5. **Connect to PostgreSQL**:
+   - Go to the "Resources" tab.
+   - Under "Add-ons", search for `Heroku Postgres` and provision it.
+
+6. **Deploy the App**:
+   - Go to the "Deploy" tab.
+   - Under "Deployment Method", select GitHub and connect your GitHub repository.
+   - Choose the branch you want to deploy from (usually `main` or `master`).
+   - Enable "Automatic Deploys" or deploy manually by clicking "Deploy Branch".
+
+7. **Run Database Migrations**:
+   - Go to the "More" dropdown in the top-right corner of the app’s dashboard and select "Run Console".
+   - Run the following commands to migrate the database:
+     ```bash
+     python manage.py migrate
+     ```
+   - Create a superuser to access the admin panel:
+     ```bash
+     python manage.py createsuperuser
+     ```
+
+8. **Collect Static Files**:
+   - Run the following command to collect static files for production:
+     ```bash
+     python manage.py collectstatic
+     ```
+
+9. **Access the app**:
+   - Your app should now be live at `https://your-app-name.herokuapp.com`.
+
+### Local Development Setup
+
+To run this project locally on your machine, follow these steps:
+
+1. **Clone the Repository**:
+   - Clone the project from GitHub using the following command:
+     ```bash
+     git clone https://github.com/your-username/your-repository.git
+     ```
+
+2. **Create a Virtual Environment**:
+   - Inside the project folder, create and activate a virtual environment:
+     ```bash
+     venv\Scripts\activate
+     source venv/bin/activate
+     ```
+
+3. **Install Dependencies**:
+   - Install all required Python packages from `requirements.txt`:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+4. **Set Up Environment Variables**:
+   - Create a `.env` file in the root directory and add the following environment variables:
+     ```env
+     SECRET_KEY=your-secret-key
+     DEBUG=True
+     CLOUDINARY_URL=your-cloudinary-url
+     DATABASE_URL=sqlite:///db.sqlite3  # For local development, use SQLite
+     ```
+
+5. **Run Migrations**:
+   - Apply migrations to set up the local database:
+     ```bash
+     python manage.py migrate
+     ```
+
+6. **Create a Superuser**:
+   - Create a superuser to access the admin panel:
+     ```bash
+     python manage.py createsuperuser
+     ```
+
+7. **Run the Local Development Server**:
+   - Run the Django development server to view the site locally:
+     ```bash
+     python manage.py runserver
+     ```
+
+8. **Access the App**:
+   - Open your web browser and go to `http://127.0.0.1:8000/` to view the application locally.
+
 
 ### Bugs
 
