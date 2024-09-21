@@ -141,3 +141,8 @@ def subscribe_newsletter(request):
     }
     
     return render(request, 'walks/subscribe_newsletter.html', context)
+
+from django.http import HttpResponseForbidden
+
+def test_403_view(request):
+    return HttpResponseForbidden()
