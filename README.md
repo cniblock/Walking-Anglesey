@@ -619,6 +619,47 @@ To run this project locally on your machine, follow these steps:
 8. **Access the App**:
    - Open your web browser and go to `http://127.0.0.1:8000/` to view the application locally.
 
+## Updates Based on Assessor's Feedback
+
+After receiving feedback on the project, several changes and improvements have been made to address the issues raised and enhance the overall functionality and design. Below is a list of changes:
+
+### 1. **Fixed CRUD Functionality**
+- Implemented missing Create, Read, Update, and Delete (CRUD) functionality for comments and posts.
+- Users can now successfully add, edit, and delete their comments on blog posts.
+- Admins can now fully approve, edit, and delete walking routes and posts.
+
+### 2. **Enhanced Agile Documentation**
+- User stories were refined with better structure and more detailed acceptance criteria.
+- Added user stories related to the new features, including CRUD functionality, custom error pages, and admin privileges.
+
+### 3. **Custom Error Pages**
+- Added custom error pages for 403, 404, and 500 errors to improve user experience when encountering issues.
+    - **403 Forbidden**: Displayed when a user tries to access restricted content.
+    - **404 Page Not Found**: Displayed when a user navigates to a non-existent page.
+    - **500 Server Error**: Displayed when there is an issue with the server.
+- Included images and better design for these error pages.
+- Added handling of error views in `views.py` and updated `urls.py` to manage custom error pages.
+
+### 4. **Wireframes and Mockups**
+- Added wireframes and mockups for all key pages in the README.
+- Included a visual representation of the user interface, providing clear insight into the design process.
+
+### 5. **Improved Deployment Documentation**
+- Expanded the "Deployment & Local Development" section of the README.
+- Provided step-by-step instructions on how to deploy the application on Heroku and how to run it locally.
+- Documented necessary environment variables and database setup, improving clarity for future developers.
+
+### 6. **Improved Commit Messages**
+- Following the assessor’s advice, we improved the commit messages to make them more descriptive and specific about the changes made.
+- Ensured commits are atomic and focused on individual changes, making the Git history easier to follow.
+
+### 7. **Test Coverage**
+- Reviewed and updated the automated and manual tests to ensure they cover all key functionalities, especially CRUD operations.
+- Documented all tests in the README, including descriptions of the tests and their results.
+
+---
+
+These changes were made to enhance the user experience, improve functionality, and ensure that the application meets the required assessment criteria. The updates make the project more robust, scalable, and user-friendly, while also improving the backend logic and documentation.
 
 ### Bugs
 
