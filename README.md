@@ -175,7 +175,7 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 
 * The **Comment Edit** page allows registered and logged-in users to update their comments on a walk blog. The form is pre-filled with the existing comment, and users can either update the comment or cancel the action, which takes them back to the walk details page.
 
-![Comment Edit Page](images/comment-edit-pic.jpg)
+![Comment Edit Page](images/comment_edit.html_screenshot.png)
 
 
 ### Future Implementations
