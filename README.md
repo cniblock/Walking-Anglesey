@@ -228,6 +228,10 @@ When building this project, I used Agile methodology to keep things flexible, co
 
 ![Agile Development](images/agile-development.jpg)
 
+Below is an example of the user stories:
+
+![User Story Example](images/error_page_userstory.png)
+
 [Here is the current Project Board.](https://github.com/users/cniblock/projects/4)
 
 To define the project's scope and requirements, I used user stories with each story having a clearly defined set of acceptance criteria. Due to time constraints, two user stories were prioritized as "won't have" using the MOSCOW model, meaning they will be part of the future development of the site.
@@ -640,9 +644,12 @@ After receiving feedback on the project, several changes and improvements have b
 - Included images and better design for these error pages.
 - Added handling of error views in `views.py` and updated `urls.py` to manage custom error pages.
 
-### 4. **Wireframes and Mockups**
-- Added wireframes and mockups for all key pages in the README.
+### 4. **Design Mockups and Design Rationale**
+- Added mockups for all key pages in the README.
 - Included a visual representation of the user interface, providing clear insight into the design process.
+- Provided a more in-depth explanation of the design choices, including the color scheme, typography, and responsive layout.
+- Justified the selection of colors and fonts to match the nautical and outdoor theme of the website.
+- Included details on imagery, visual hierarchy, and layout improvements.
 
 ### 5. **Improved Deployment Documentation**
 - Expanded the "Deployment & Local Development" section of the README.
