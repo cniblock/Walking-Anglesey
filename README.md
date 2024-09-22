@@ -79,6 +79,16 @@ Imagery plays a crucial role in the design, with high-quality photos of Anglesey
 
 With a carefully chosen colour scheme, typography, and layout, Walk Anglesey aims to create a welcoming and user-friendly site that invites you to explore and be part of our walking community.
 
+### Images of Design Mockups
+
+#### Image 1
+
+#### Image 2
+
+#### Image 3
+
+#### Image 4
+
 ## Features
 
 The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page, About page and a Newsletter sign up page.
