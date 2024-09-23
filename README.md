@@ -87,11 +87,11 @@ With a carefully chosen colour scheme, typography, and layout, Walk Anglesey aim
 
 #### Walk Blog List
 
-![Colours](mockup_2.png)
+![Colours](images/mockup_2.png)
 
 #### Walk Details Page
 
-![Colours](mockup_3.png)
+![Colours](images/mockup_3.png)
 
 ## Features
 
