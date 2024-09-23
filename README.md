@@ -302,7 +302,7 @@ Below is an example of the user stories:
 To define the project's scope and requirements, I used user stories with each story having a clearly defined set of acceptance criteria. Due to time constraints, two user stories were prioritized as "won't have" using the MOSCOW model, meaning they will be part of the future development of the site.
 
 ### Models
-
+[Back to top](#top)
 The following models are used in this application:
 
 ### Entity Relationshop Diagram
@@ -637,6 +637,7 @@ This project was developed using the Django framework and deployed to Heroku. Be
 
 ### Local Development Setup
 [Back to top](#top)
+
 To run this project locally on your machine, follow these steps:
 
 1. **Clone the Repository**:
