@@ -240,11 +240,11 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 
 * The **Comment Edit** page allows registered and logged-in users to update their comments on a walk blog. The form is pre-filled with the existing comment, and users can either update the comment or cancel the action, which takes them back to the walk details page.
 
-![Comment Edit Page](images/comment_edit.html_screenshot.png)
-
 ![CRUD Edit Test 1](images/edit_comment_example.png)
 
 ![CRUD Edit Test 2](images/edit_comment_example2.png)
+
+![Comment Edit Page](images/comment_edit.html_screenshot.png)
 
 ### Comment Delete Page
 
@@ -706,6 +706,7 @@ To run this project locally on your machine, follow these steps:
 After receiving feedback on the project, several changes and improvements have been made to address the issues raised and enhance the overall functionality and design. Below is a list of changes:
 
 ### 1. **Fixed CRUD Functionality**
+- [Edit and Delete Functions](#comment-edit-page)
 - Implemented missing Create, Read, Update, and Delete (CRUD) functionality for comments and posts.
 - Users can now successfully add, edit, and delete their comments on blog posts.
 - Admins can now fully approve, edit, and delete walking routes and posts.
