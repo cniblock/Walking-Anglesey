@@ -8,9 +8,60 @@ The website offers detailed walk guides, user-contributed posts, weather informa
 
 ### [View Walk Anglesey hosted on Heroku](https://walk-anglesey-84445998906a.herokuapp.com/)
 
-![Last commit](https://img.shields.io/badge/Last_Commit-4th_June-orange)
+![Last commit](https://img.shields.io/badge/Last_Commit-24th_Sept-orange)
 ![Contributors](https://img.shields.io/badge/Contributors-1-purple) ![W3C Validation](https://img.shields.io/badge/W3C-validated-green) 
 ![HTML Validation](https://img.shields.io/badge/HTML-validated-green) ![Languages](https://img.shields.io/badge/Languages-4-blue) ![Frameworks](https://img.shields.io/badge/Frameworks-2-blue) ![API](https://img.shields.io/badge/API's-4-blue)
+
+## Table of Contents
+
+1. [Walk Anglesey Blog Website](#walk-anglesey-blog-website)
+2. [User Experience](#user-experience)
+   - [Website Concept](#website-concept)
+   - [Key Features of the Website](#key-features-of-the-website)
+   - [User Stories](#user-stories)
+     - [Owner/Admin Goals](#owneradmin-goals)
+     - [Registered User Goals](#registered-user-goals)
+     - [Visitor Goals](#visitor-goals)
+3. [Design](#design)
+   - [Colour Scheme](#colour-scheme)
+   - [Typography](#typography)
+   - [Imagery & Layout](#imagery--layout)
+   - [Images of Design Mockups](#images-of-design-mockups)
+4. [Features](#features)
+   - [Home Page](#the-home-page)
+   - [Walk Blog List Page](#walk-blog-list-page)
+   - [Walk Blog Detail](#walk-blog-detail)
+   - [About Us Page](#about-us-page)
+   - [Newsletter Subscription Page](#newsletter-subscription-page)
+   - [Comment Edit Page](#comment-edit-page)
+   - [Future Implementations](#future-implementations)
+   - [Accessibility](#accessibility)
+5. [Technologies Used](#technologies-used)
+   - [Languages Used](#languages-used)
+   - [Frameworks, Libraries and Programmes Used](#frameworks-libraries-and-programmes-used)
+6. [Deployment & Local Development](#deployment--local-development)
+   - [Agile Development](#agile-development)
+   - [Models](#models)
+   - [Entity Relationship Diagram](#entity-relationshop-diagram)
+   - [Forms](#forms)
+   - [Views](#views)
+   - [URLs](#urls)
+   - [Template](#template)
+7. [Custom Error Pages](#custom-error-pages)
+8. [Testing](#testing)
+   - [Manual Testing](#manual-testing)
+   - [Automated Testing](#automated-testing)
+   - [Code Validation](#code-validation)
+9. [Deployment & Local Development](#deployment--local-development)
+   - [Deployment to Heroku](#deployment-to-heroku)
+   - [Local Development Setup](#local-development-setup)
+10. [Updates Based on Assessor's Feedback](#updates-based-on-assessors-feedback)
+11. [Bugs](#bugs)
+   - [Known Issues](#known-issues)
+12. [Credits](#credits)
+   - [Media](#media)
+   - [Acknowledgements](#acknowledgements)
+
 
 ## User Experience 
 
@@ -677,6 +728,10 @@ After receiving feedback on the project, several changes and improvements have b
 ### 7. **Test Coverage**
 - Reviewed and updated the automated and manual tests to ensure they cover all key functionalities, especially CRUD operations.
 - Documented all tests in the README, including descriptions of the tests and their results.
+
+### 8. **Table of Contents Added**
+- Added a Table of Contents to the README.md file to improve navigation and provide a clear structure.
+- The Table of Contents links directly to key sections such as User Experience, Features, Testing, and more, making it easier for users to find relevant information quickly.
 
 ---
 
