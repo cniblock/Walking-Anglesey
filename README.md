@@ -242,6 +242,18 @@ The Website consists of a Responsive Navbar and Footer, a Homepage, a Walks page
 
 ![Comment Edit Page](images/comment_edit.html_screenshot.png)
 
+![CRUD Edit Test 1](images/edit_comment_example.png)
+
+![CRUD Edit Test 2](images/edit_comment_example2.png)
+
+### Comment Delete Page
+
+The **Comment Delete** page allows registered and logged-in users to remove their comments from a walk blog. When users click the delete button, a confirmation modal appears, asking them to confirm the deletion. The modal warns the user that the action cannot be undone, ensuring they are aware of the permanence of their decision. The user can either cancel the action, which closes the modal, or proceed with deletion, which permanently removes the comment from the blog post.
+
+
+![CRUD Delete Test 1](images/delete_comment_example.png)
+
+![CRUD Delete Test 2](images/delete_comment_example2.png)
 
 ### Future Implementations
 [Back to top](#top)
@@ -699,10 +711,12 @@ After receiving feedback on the project, several changes and improvements have b
 - Admins can now fully approve, edit, and delete walking routes and posts.
 
 ### 2. **Enhanced Agile Documentation**
+- [Agile Development](#agile-development)
 - User stories were refined with better structure and more detailed acceptance criteria.
 - Added user stories related to the new features, including CRUD functionality, custom error pages, and admin privileges.
 
 ### 3. **Custom Error Pages**
+- [Custom Error Pages](#custom-error-pages)
 - Added custom error pages for 403, 404, and 500 errors to improve user experience when encountering issues.
     - **403 Forbidden**: Displayed when a user tries to access restricted content.
     - **404 Page Not Found**: Displayed when a user navigates to a non-existent page.
@@ -711,6 +725,7 @@ After receiving feedback on the project, several changes and improvements have b
 - Added handling of error views in `views.py` and updated `urls.py` to manage custom error pages.
 
 ### 4. **Design Mockups and Design Rationale**
+- [Images of Design Mockups](#images-of-design-mockups)
 - Added mockups for all key pages in the README.
 - Included a visual representation of the user interface, providing clear insight into the design process.
 - Provided a more in-depth explanation of the design choices, including the color scheme, typography, and responsive layout.
@@ -718,6 +733,7 @@ After receiving feedback on the project, several changes and improvements have b
 - Included details on imagery, visual hierarchy, and layout improvements.
 
 ### 5. **Improved Deployment Documentation**
+- [Deployment & Local Development](#deployment--local-development)
 - Expanded the "Deployment & Local Development" section of the README.
 - Provided step-by-step instructions on how to deploy the application on Heroku and how to run it locally.
 - Documented necessary environment variables and database setup, improving clarity for future developers.
