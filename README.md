@@ -770,6 +770,9 @@ These changes were made to enhance the user experience, improve functionality, a
 * Error related to Cloundinary image links being http instead of https
 ![https](images/https-error.jpg)
 
+* GoogleMaps API Not loading correctly since key expired.
+![GoogleMapsAPI](images/map_dev_mode.png)
+
 ## Credits
 
 ### Media
